@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tree Locations</title>
+    <style>
+        /* Basic Styles for the Page */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        #map {
+            height: 100vh; /* Full height of the viewport */
+            width: 100%; /* Full width of the screen */
+        }
+
+        /* Popup Content Styles */
+        .popup-content {
+            max-width: 300px;
+            padding: 10px;
+            background-color: #f4f4f4;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+            .popup-content img {
+                max-width: 100%;
+                height: auto;
+                border-radius: 8px;
+            }
+
+            .popup-content h3 {
+                margin-top: 10px;
+                font-size: 1.2em;
+            }
+
+            .popup-content p {
+                margin: 5px 0;
+            }
+
+        /* Media Query for Responsiveness */
+        @media (max-width: 600px) {
+            .popup-content {
+                max-width: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Google Map container -->
+    <div id="map"></div>
+
+    <script>
+        // Sample JSON Data
+        const treesData = {
+            "Trees": [
+                {
+                    "serial_number": "T001",
+                    "area_name": "Area 1",
+                    "location_url": "https://maps.google.com/maps?q=24.6057335%2C73.7204401&z=17&hl=en",
+                    "latitude": 24.6057335,
+                    "longitude": 73.7204401,
+                    "situation": "Normal",
+                    "picture_url": "https://photos.google.com/abcd12345efgh67890"
+                },
+                {
+                    "serial_number": "T002",
+                    "area_name": "Area 2",
+                    "location_url": "https://maps.google.com/maps?q=24.6057605%2C73.7205993&z=17&hl=en",
+                    "latitude": 24.6057605,
+                    "longitude": 73.7205993,
+                    "situation": "Very Bad",
+                    "picture_url": "https://photos.google.com/ijkl98765mnop43210"
+                },
+                {
+                    "serial_number": "T003",
+                    "area_name": "Area 3",
+                    "location_url": "https://maps.google.com/maps?q=24.6065772%2C73.7234029&z=17&hl=en",
+                    "latitude": 24.6065772,
+                    "longitude": 73.7234029,
+                    "situation": "Bad",
+                    "picture_url": "https://photos.google.com/qrst56789uvwx34567"
+                },
+                {
+                    "serial_number": "T004",
+                    "area_name": "Area 4",
+                    "location_url": "https://maps.google.com/maps?q=24.6066038%2C73.7235647&z=17&hl=en",
+                    "latitude": 24.6066038,
+                    "longitude": 73.7235647,
+                    "situation": "Normal",
+                    "picture_url": "https://photos.google.com/yzab01234cdfe56789"
+                },
+                {
+                    "serial_number": "T005",
+                    "area_name": "Area 5",
+                    "location_url": "https://maps.google.com/maps?q=24.6066518%2C73.7236618&z=17&hl=en",
+                    "latitude": 24.6066518,
+                    "longitude": 73.7236618,
+                    "situation": "Normal",
+                    "picture_url": "https://photos.google.com/abcd56789efgh01234"
+                },
+                {
+                    "serial_number": "T006",
+                    "area_name": "Area 6",
+                    "location_url": "https://maps.google.com/maps?q=24.6067599%2C73.7239518&z=17&hl=en",
+                    "latitude": 24.6067599,
+                    "longitude": 73.7239518,
+                    "situation": "Normal",
+                    "picture_url": "https://photos.google.com/efgh56789ijkl12345"
+                },
+                {
+                    "serial_number": "T007",
+                    "area_name": "Area 7",
+                    "location_url": "https://maps.google.com/maps?q=24.60676%2C73.7239433&z=17&hl=en",
+                    "latitude": 24.60676,
+                    "longitude": 73.7239433,
+                    "situation": "Normal",
+                    "picture_url": "https://photos.google.com/mnop67890qrst23456"
+                },
+                {
+                    "serial_number": "T008",
+                    "area_name": "Area 8",
+                    "location_url": "https://maps.google.com/maps?q=24.6068223%2C73.7240765&z=17&hl=en",
+                    "latitude": 24.6068223,
+                    "longitude": 73.7240765,
+                    "situation": "Very Bad",
+                    "picture_url": "https://photos.google.com/stuv23456wxyz67890"
+                },
+                {
+                    "serial_number": "T009",
+                    "area_name": "Area 9",
+                    "location_url": "https://maps.google.com/maps?q=24.6068208%2C73.7241718&z=17&hl=en",
+                    "latitude": 24.6068208,
+                    "longitude": 73.7241718,
+                    "situation": "Bad",
+                    "picture_url": "https://photos.google.com/abcdef12345ghijk67890"
+                },
+                {
+                    "serial_number": "T010",
+                    "area_name": "Area 10",
+                    "location_url": "https://maps.google.com/maps?q=24.6068411%2C73.7242482&z=17&hl=en",
+                    "latitude": 24.6068411,
+                    "longitude": 73.7242482,
+                    "situation": "Normal",
+                    "picture_url": "https://photos.google.com/lmnop98765qrst23456"
+                },
+                {
+                    "serial_number": "T011",
+                    "area_name": "Area 11",
+                    "location_url": "https://maps.google.com/maps?q=24.6007286%2C73.7163279&z=17&hl=en",
+                    "latitude": 24.6007286,
+                    "longitude": 73.7163279,
+                    "situation": "Normal",
+                    "picture_url": "https://photos.google.com/uvwxyz34567abcfed"
+                },
+                {
+                    "serial_number": "T012",
+                    "area_name": "Area 12",
+                    "location_url": "https://maps.google.com/maps?q=24.6007503%2C73.7164435&z=17&hl=en",
+                    "latitude": 24.6007503,
+                    "longitude": 73.7164435,
+                    "situation": "Bad",
+                    "picture_url": "https://photos.google.com/hijk67890lmnop12345"
+                },
+                {
+                    "serial_number": "DPS_ML1",
+                    "area_name": "DPS_M_L1 Area",
+                    "location_url": "https://maps.google.com/maps?q=24.6091635%2C73.718613&z=17&hl=en",
+                    "latitude": 24.6091635,
+                    "longitude": 73.718613,
+                    "situation": "Normal",
+                    "picture_url": "DPS_M_L1.jpg"
+                },
+                {
+                    "serial_number": "DPS_ML2",
+                    "area_name": "DPS_M_L2 Area",
+                    "location_url": "https://maps.google.com/maps?q=24.6091616%2C73.7186848&z=17&hl=en",
+                    "latitude": 24.6091616,
+                    "longitude": 73.7186848,
+                    "situation": "Very Bad",
+                    "picture_url": "https://drive.google.com/file/d/1XFB2X1C6rjDqfeYVI3DcCNIwN96bWzs4/view?usp=sharing"
+                },
+                {
+                    "serial_number": "DPS_ML3",
+                    "area_name": "DPS_M_L3 Area",
+                    "location_url": "https://maps.google.com/maps?q=24.6090639%2C73.7188329&z=17&hl=en",
+                    "latitude": 24.6090639,
+                    "longitude": 73.7188329,
+                    "situation": "Bad",
+                    "picture_url": "https://photos.google.com/photo/AF1QipOvlzLWRlCQKKyKt0rkaWVPG9EXJRVA_YDVcFti"
+                },
+                {
+                    "serial_number": "DPS_ML4",
+                    "area_name": "DPS_M_L4 Area",
+                    "location_url": "https://maps.google.com/maps?q=24.6090528%2C73.7188752&z=17&hl=en",
+                    "latitude": 24.6090528,
+                    "longitude": 73.7188752,
+                    "situation": "Normal",
+                    "picture_url": "https://photos.google.com/DPS_M_L4"
+                },
+                {
+                    "serial_number": "DPS_ML5",
+                    "area_name": "DPS_M_L5 Area",
+                    "location_url": "https://maps.google.com/maps?q=24.6089093%2C73.7193542&z=17&hl=en",
+                    "latitude": 24.6089093,
+                    "longitude": 73.7193542,
+                    "situation": "Normal",
+                    "picture_url": "https://photos.google.com/DPS_M_L5"
+                },
+                {
+                    "serial_number": "DPS_ML6",
+                    "area_name": "DPS_M_L6 Area",
+                    "location_url": "https://maps.google.com/maps?q=24.6087373%2C73.7200196&z=17&hl=en",
+                    "latitude": 24.6087373,
+                    "longitude": 73.7200196,
+                    "situation": "Normal",
+                    "picture_url": "https://photos.google.com/DPS_M_L6"
+                },
+                {
+                    "serial_number": "DPS_ML7",
+                    "area_name": "DPS_M_L7 Area",
+                    "location_url": "https://maps.google.com/maps?q=24.6086836%2C73.7203672&z=17&hl=en",
+                    "latitude": 24.6086836,
+                    "longitude": 73.7203672,
+                    "situation": "Normal",
+                    "picture_url": "https://photos.google.com/DPS_M_L7"
+                },
+                {
+                    "serial_number": "DPS_ML8",
+                    "area_name": "DPS_M_L8 Area",
+                    "location_url": "https://maps.google.com/maps?q=24.6088602%2C73.7215726&z=17&hl=en",
+                    "latitude": 24.6088602,
+                    "longitude": 73.7215726,
+                    "situation": "Very Bad",
+                    "picture_url": "https://photos.google.com/DPS_M_L8"
+                },
+                {
+                    "serial_number": "DPS_ML9",
+                    "area_name": "DPS_M_L9 Area",
+                    "location_url": "https://maps.google.com/maps?q=24.6089686%2C73.7218062&z=17&hl=en",
+                    "latitude": 24.6089686,
+                    "longitude": 73.7218062,
+                    "situation": "Bad",
+                    "picture_url": "https://photos.google.com/DPS_M_L9"
+                },
+                {
+                    "serial_number": "DPS_ML10",
+                    "area_name": "DPS_M_L10 Area",
+                    "location_url": "https://maps.google.com/maps?q=24.6089566%2C73.7218974&z=17&hl=en",
+                    "latitude": 24.6089566,
+                    "longitude": 73.7218974,
+                    "situation": "Normal",
+                    "picture_url": "https://photos.google.com/DPS_M_L10"
+                },
+                {
+                    "serial_number": "DPS_ML11",
+                    "area_name": "DPS_M_L11 Area",
+                    "location_url": "https://maps.google.com/maps?q=24.609052%2C73.7222131&z=17&hl=en",
+                    "latitude": 24.609052,
+                    "longitude": 73.7222131,
+                    "situation": "Normal",
+                    "picture_url": "https://photos.google.com/DPS_M_L11"
+                },
+                {
+                    "serial_number": "DPS_ML12",
+                    "area_name": "DPS_M_L12 Area",
+                    "location_url": "https://maps.google.com/maps?q=24.6090173%2C73.7224608&z=17&hl=en",
+                    "latitude": 24.6090173,
+                    "longitude": 73.7224608,
+                    "situation": "Bad",
+                    "picture_url": "https://photos.google.com/DPS_M_L12"
+                },
+                {
+                    "serial_number": "DPS_ML13",
+                    "area_name": "DPS_M_L13 Area",
+                    "location_url": "https://maps.google.com/maps?q=24.6091479%2C73.7226924&z=17&hl=en",
+                    "latitude": 24.6091479,
+                    "longitude": 73.7226924,
+                    "situation": "Normal",
+                    "picture_url": "https://photos.google.com/DPS_M_L13"
+                },
+                {
+                    "serial_number": "DPS_ML14",
+                    "area_name": "DPS_M_L14 Area",
+                    "location_url": "https://maps.google.com/maps?q=24.609158%2C73.7227405&z=17&hl=en",
+                    "latitude": 24.609158,
+                    "longitude": 73.7227405,
+                    "situation": "Normal",
+                    "picture_url": "https://photos.google.com/DPS_M_L14"
+                },
+                {
+                    "serial_number": "DPS_ML15",
+                    "area_name": "DPS_M_L15 Area",
+                    "location_url": "https://maps.google.com/maps?q=24.6091841%2C73.722807&z=17&hl=en",
+                    "latitude": 24.6091841,
+                    "longitude": 73.722807,
+                    "situation": "Normal",
+                    "picture_url": "https://photos.google.com/DPS_M_L15"
+                },
+                {
+                    "serial_number": "DPS_ML16",
+                    "area_name": "DPS_M_L16 Area",
+                    "location_url": "https://maps.google.com/maps?q=24.6091428%2C73.7229016&z=17&hl=en",
+                    "latitude": 24.6091428,
+                    "longitude": 73.7229016,
+                    "situation": "Bad",
+                    "picture_url": "https://photos.google.com/DPS_M_L16"
+                }
+            ]
+        };
+
+        // Initialize Google Map
+        function initMap() {
+            const map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 15,
+                center: { lat: 24.6057335, lng: 73.7204401 } // Default center (near the first tree)
+            });
+
+            treesData.Trees.forEach((tree) => {
+
+                tree.picture_url = `images/${tree.serial_number}.jpg`;
+
+                const marker = new google.maps.Marker({
+                    position: { lat: tree.latitude, lng: tree.longitude },
+                    map: map,
+                    title: tree.area_name
+                });
+
+                const contentString = `
+                        <div class="popup-content">
+                            <h3>${tree.area_name}</h3>
+                            <img src="${tree.picture_url}" alt="Tree Image">
+                            <p><strong>Serial Number:</strong> ${tree.serial_number}</p>
+                            <p><strong>Tree Situation:</strong> ${tree.situation}</p>
+                            <p><a href="${tree.location_url}" target="_blank">View on Google Maps</a></p>
+                        </div>
+                    `;
+
+                const infowindow = new google.maps.InfoWindow({
+                    content: contentString
+                });
+
+                marker.addListener("click", function () {
+                    infowindow.open(map, marker);
+                });
+            });
+        }
+    </script>
+
+    <!-- Google Maps API Script -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDnt6Uk8Q_pjSeLWbo8YrheoMJssS5RFPw&callback=initMap" async defer></script>
+
+</body>
+</html>
