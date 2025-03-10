@@ -25,28 +25,39 @@
             background-color: #f4f4f4;
             border-radius: 8px;
             text-align: center;
+            box-sizing: border-box; /* Ensures padding does not affect overall size */
         }
 
-            .popup-content img {
-                max-width: 100%;
-                height: auto;
-                border-radius: 8px;
-            }
+        .popup-content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
 
-            .popup-content h3 {
-                margin-top: 10px;
-                font-size: 1.2em;
-            }
+        .popup-content h3 {
+            margin-top: 10px;
+            font-size: 1.2em;
+        }
 
-            .popup-content p {
-                margin: 5px 0;
-            }
+        .popup-content p {
+            margin: 5px 0;
+        }
 
         /* Media Query for Responsiveness */
         @media (max-width: 600px) {
             .popup-content {
                 max-width: 250px;
             }
+        }
+
+        /* Popup position and size adjustments */
+        .gm-style-iw {
+            max-width: calc(100% - 100px) !important; /* Popup width 100% - 50px margin on each side */
+            max-height: 300px; /* Set a max height for the popup */
+            padding: 0;
+            margin: 50px; /* 50px margin from all edges of the screen */
+            box-sizing: border-box;
+            border-radius: 8px;
         }
     </style>
 
@@ -56,13 +67,27 @@
 </head>
 <body>
 
+    <script>
+        // Set interval to check every 100 milliseconds
+        var interval = setInterval(function () {
+            // Find the button by its class name
+            var button = document.querySelector('.dismissButton');
+
+            // If button exists, click it and stop the interval
+            if (button) {
+                button.click();  // Simulate a click
+                clearInterval(interval);  // Stop the interval
+                console.log("Button clicked and interval stopped.");
+            }
+        }, 50);  // Check every 50 milliseconds
+    </script>
+
     <!-- Google Map container -->
     <div id="map"></div>
 
     <script>
         // Initialize Google Map
         function initMap() {
-
             const map = new google.maps.Map(document.getElementById("map"), {
                 zoom: 16,
                 center: { lat: 24.6057335, lng: 73.7204401 } // Default center (near the first tree)
@@ -80,14 +105,14 @@
                 });
 
                 const contentString = `
-                                <div class="popup-content">
-                                    <h3>${tree.area_name}</h3>
-                                    <img src="${tree.picture_url}" alt="Tree Image">
-                                    <p><strong>Serial Number:</strong> ${tree.serial_number}</p>
-                                    <p><strong>Tree Situation:</strong> ${tree.situation}</p>
-                                    <p><a href="${tree.location_url}" target="_blank">View on Google Maps</a></p>
-                                </div>
-                            `;
+                    <div class="popup-content">
+                        <h3>${tree.area_name}</h3>
+                        <img src="${tree.picture_url}" alt="Tree Image">
+                        <p><strong>Serial Number:</strong> ${tree.serial_number}</p>
+                        <p><strong>Tree Situation:</strong> ${tree.situation}</p>
+                        <p><a href="${tree.location_url}" target="_blank">View on Google Maps</a></p>
+                    </div>
+                `;
 
                 const infowindow = new google.maps.InfoWindow({
                     content: contentString
