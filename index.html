@@ -62,6 +62,7 @@
     <script>
         // Initialize Google Map
         function initMap() {
+
             const map = new google.maps.Map(document.getElementById("map"), {
                 zoom: 15,
                 center: { lat: 24.6057335, lng: 73.7204401 } // Default center (near the first tree)
@@ -79,53 +80,14 @@
                 });
 
                 const contentString = `
-                            <div class="popup-content">
-                                <h3>${tree.area_name}</h3>
-                                <img src="${tree.picture_url}" alt="Tree Image">
-                                <p><strong>Serial Number:</strong> ${tree.serial_number}</p>
-                                <p><strong>Tree Situation:</strong> ${tree.situation}</p>
-                                <p><a href="${tree.location_url}" target="_blank">View on Google Maps</a></p>
-                            </div>
-                        `;
-
-                const infowindow = new google.maps.InfoWindow({
-                    content: contentString
-                });
-
-                marker.addListener("click", function () {
-                    infowindow.open(map, marker);
-                });
-            });
-        }
-    </script>
-    <script>
-        // Initialize Google Map
-        function initMap() {
-            const map = new google.maps.Map(document.getElementById("map"), {
-                zoom: 15,
-                center: { lat: 24.6057335, lng: 73.7204401 } // Default center (near the first tree)
-            });
-
-            treesData.Trees.forEach((tree) => {
-
-                // Optionally, you can customize the image URL or leave it like below
-                tree.picture_url = `images/${tree.serial_number}.jpg`;
-
-                const marker = new google.maps.Marker({
-                    position: { lat: tree.latitude, lng: tree.longitude },
-                    map: map,
-                    title: tree.area_name
-                });
-
-                const contentString = `
-                        <div class="popup-content">
-                            <h3>${tree.area_name}</h3>
-                            <img src="${tree.picture_url}" alt="Tree Image">
-                            <p><strong>Serial Number:</strong> ${tree.serial_number}</p>
-                            <p><strong>Tree Situation:</strong> ${tree.situation}</p>
-                            <p><a href="${tree.location_url}" target="_blank">View on Google Maps</a></p>
-                        </div>
-                    `;
+                                <div class="popup-content">
+                                    <h3>${tree.area_name}</h3>
+                                    <img src="${tree.picture_url}" alt="Tree Image">
+                                    <p><strong>Serial Number:</strong> ${tree.serial_number}</p>
+                                    <p><strong>Tree Situation:</strong> ${tree.situation}</p>
+                                    <p><a href="${tree.location_url}" target="_blank">View on Google Maps</a></p>
+                                </div>
+                            `;
 
                 const infowindow = new google.maps.InfoWindow({
                     content: contentString
@@ -139,7 +101,7 @@
     </script>
 
     <!-- Google Maps API Script -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDnt6Uk8Q_pjSeLWbo8YrheoMJssS5RFPw&callback=initMap" async defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDnt6Uk8Q_pjSeLWbo8YrheoMJssS5RFPw&callback=initMap&libraries=places&language=en&region=US" async defer></script>
 
 </body>
 </html>
