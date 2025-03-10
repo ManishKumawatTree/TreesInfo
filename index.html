@@ -25,7 +25,6 @@
             background-color: #f4f4f4;
             border-radius: 8px;
             text-align: center;
-            box-sizing: border-box; /* Ensures padding does not affect overall size */
         }
 
             .popup-content img {
@@ -49,20 +48,9 @@
                 max-width: 250px;
             }
         }
-
-        /* Popup position and size adjustments */
-        .gm-style-iw {
-            max-width: calc(100% - 100px) !important; /* Popup width 100% - 50px margin on each side */
-            max-height: 300px; /* Set a max height for the popup */
-            padding: 0;
-            margin: 50px; /* 50px margin from all edges of the screen */
-            box-sizing: border-box;
-            border-radius: 8px;
-        }
     </style>
 
-    <!-- Link the treeData.js file -->
-    //<script src="treeData.js"></script>
+    <script src="treeData.js"></script>
 
 </head>
 <body>
@@ -86,6 +74,7 @@
     <div id="map"></div>
 
     <script>
+
         // Initialize Google Map
         function initMap() {
             const map = new google.maps.Map(document.getElementById("map"), {
@@ -93,38 +82,24 @@
                 center: { lat: 24.6057335, lng: 73.7204401 } // Default center (near the first tree)
             });
 
-
-            const treeIcon = 'tree.png'; // This is the local PNG file in the same folder as your HTML file
-
-            // Custom tree icon URL
-            //const treeIcon = 'https://example.com/tree-icon.png'; // Replace this with the URL of your tree icon image
-
             treesData.Trees.forEach((tree) => {
 
-                // Optionally, you can customize the image URL or leave it like below
                 tree.picture_url = `images/${tree.serial_number}.jpg`;
 
                 const marker = new google.maps.Marker({
                     position: { lat: tree.latitude, lng: tree.longitude },
                     map: map,
-                    title: tree.area_name,
-                    icon: {
-                        //url: treeIcon, // URL of the custom icon
-                        scaledSize: new google.maps.Size(40, 40), // Adjust the size of the icon (width, height)
-                        origin: new google.maps.Point(0, 0),
-                        anchor: new google.maps.Point(20, 40) // Set the anchor point of the icon to the bottom center
-                    }
+                    title: tree.area_name
                 });
 
                 const contentString = `
-                        <div class="popup-content">
-                            <h3>${tree.area_name}</h3>
-                            <img src="${tree.picture_url}" alt="Tree Image">
-                            <p><strong>Serial Number:</strong> ${tree.serial_number}</p>
-                            <p><strong>Tree Situation:</strong> ${tree.situation}</p>
-                            <p><a href="${tree.location_url}" target="_blank">View on Google Maps</a></p>
-                        </div>
-                    `;
+                                <div class="popup-content">
+                                    <p><strong>${tree.area_name}</p>
+                                    <img src="${tree.picture_url}" alt="Tree Image">
+                                    <p><strong>Tree Situation:</strong> ${tree.situation}</p>
+                                    <p><strong>Serial Number:</strong> ${tree.serial_number}   <a href="${tree.location_url}" target="_blank">View on Google Maps</a></p>
+                                </div>
+                            `;
 
                 const infowindow = new google.maps.InfoWindow({
                     content: contentString
