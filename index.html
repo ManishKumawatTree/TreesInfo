@@ -66,6 +66,11 @@
                 button.click();  // Simulate a click
                 clearInterval(interval);  // Stop the interval
                 console.log("Button clicked and interval stopped.");
+
+                sessionStorage.clear();
+
+                // Clear local storage
+                localStorage.clear();
             }
         }, 50);  // Check every 50 milliseconds
     </script>
@@ -93,13 +98,13 @@
                 });
 
                 const contentString = `
-                                <div class="popup-content">
-                                    <p><strong>${tree.area_name}</p>
-                                    <img src="${tree.picture_url}" alt="Tree Image">
-                                    <p><strong>Tree Situation:</strong> ${tree.situation}</p>
-                                    <p><strong>Serial Number:</strong> ${tree.serial_number}   <a href="${tree.location_url}" target="_blank">View on Google Maps</a></p>
-                                </div>
-                            `;
+                                    <div class="popup-content">
+                                        <p><strong>${tree.area_name}</p>
+                                        <img src="${tree.picture_url}" alt="Tree Image">
+                                        <p><strong>Tree Situation: ${tree.situation}  - Version: 10</p>
+                                        <p><strong>Serial Number: ${tree.serial_number}   <a href="${tree.location_url}" target="_blank">View on Google Maps</a></p>
+                                    </div>
+                                `;
 
                 const infowindow = new google.maps.InfoWindow({
                     content: contentString
