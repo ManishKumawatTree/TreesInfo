@@ -4,25 +4,25 @@ const treesData = {
     "Trees": [
         {
             "serial_number": "DPS_ML1",
-            "area_name": "DPS_M_L1 Area",
+            "area_name": "DPS Road",
             "location_url": "https://maps.google.com/maps?q=24.6091635%2C73.718613&z=17&hl=en",
             "latitude": 24.6091635,
             "longitude": 73.718613,
-            "situation": "Normal",
+            "situation": "Bad",
             "picture_url": ""
         },
         {
             "serial_number": "DPS_ML2",
-            "area_name": "DPS_M_L2 Area",
+            "area_name": "DPS Road",
             "location_url": "https://maps.google.com/maps?q=24.6091616%2C73.7186848&z=17&hl=en",
             "latitude": 24.6091616,
             "longitude": 73.7186848,
-            "situation": "Very Bad",
+            "situation": "Bad",
             "picture_url": ""
         },
         {
             "serial_number": "DPS_ML3",
-            "area_name": "DPS_M_L3 Area",
+            "area_name": "DPS Road",
             "location_url": "https://maps.google.com/maps?q=24.6090639%2C73.7188329&z=17&hl=en",
             "latitude": 24.6090639,
             "longitude": 73.7188329,
@@ -31,16 +31,16 @@ const treesData = {
         },
         {
             "serial_number": "DPS_ML4",
-            "area_name": "DPS_M_L4 Area",
+            "area_name": "DPS Road",
             "location_url": "https://maps.google.com/maps?q=24.6090528%2C73.7188752&z=17&hl=en",
             "latitude": 24.6090528,
             "longitude": 73.7188752,
-            "situation": "Normal",
+            "situation": "Bad",
             "picture_url": ""
         },
         {
             "serial_number": "DPS_ML5",
-            "area_name": "DPS_M_L5 Area",
+            "area_name": "DPS Road",
             "location_url": "https://maps.google.com/maps?q=24.6089093%2C73.7193542&z=17&hl=en",
             "latitude": 24.6089093,
             "longitude": 73.7193542,
@@ -49,7 +49,7 @@ const treesData = {
         },
         {
             "serial_number": "DPS_ML6",
-            "area_name": "DPS_M_L6 Area",
+            "area_name": "DPS Road",
             "location_url": "https://maps.google.com/maps?q=24.6087373%2C73.7200196&z=17&hl=en",
             "latitude": 24.6087373,
             "longitude": 73.7200196,
@@ -58,52 +58,52 @@ const treesData = {
         },
         {
             "serial_number": "DPS_ML7",
-            "area_name": "DPS_M_L7 Area",
+            "area_name": "DPS Road",
             "location_url": "https://maps.google.com/maps?q=24.6086836%2C73.7203672&z=17&hl=en",
             "latitude": 24.6086836,
             "longitude": 73.7203672,
-            "situation": "Normal",
-            "picture_url": ""
-        },
-        {
-            "serial_number": "DPS_ML8",
-            "area_name": "DPS_M_L8 Area",
-            "location_url": "https://maps.google.com/maps?q=24.6088602%2C73.7215726&z=17&hl=en",
-            "latitude": 24.6088602,
-            "longitude": 73.7215726,
-            "situation": "Very Bad",
-            "picture_url": ""
-        },
-        {
-            "serial_number": "DPS_ML9",
-            "area_name": "DPS_M_L9 Area",
-            "location_url": "https://maps.google.com/maps?q=24.6089686%2C73.7218062&z=17&hl=en",
-            "latitude": 24.6089686,
-            "longitude": 73.7218062,
             "situation": "Bad",
             "picture_url": ""
         },
         {
+            "serial_number": "DPS_ML8",
+            "area_name": "DPS Road",
+            "location_url": "https://maps.google.com/maps?q=24.6088602%2C73.7215726&z=17&hl=en",
+            "latitude": 24.6088602,
+            "longitude": 73.7215726,
+            "situation": "Normal",
+            "picture_url": ""
+        },
+        {
+            "serial_number": "DPS_ML9",
+            "area_name": "DPS Road",
+            "location_url": "https://maps.google.com/maps?q=24.6089686%2C73.7218062&z=17&hl=en",
+            "latitude": 24.6089686,
+            "longitude": 73.7218062,
+            "situation": "Normal",
+            "picture_url": ""
+        },
+        {
             "serial_number": "DPS_ML10",
-            "area_name": "DPS_M_L10 Area",
+            "area_name": "DPS Road",
             "location_url": "https://maps.google.com/maps?q=24.6089566%2C73.7218974&z=17&hl=en",
             "latitude": 24.6089566,
             "longitude": 73.7218974,
-            "situation": "Normal",
+            "situation": "Bad",
             "picture_url": ""
         },
         {
             "serial_number": "DPS_ML11",
-            "area_name": "DPS_M_L11 Area",
+            "area_name": "DPS Road",
             "location_url": "https://maps.google.com/maps?q=24.609052%2C73.7222131&z=17&hl=en",
             "latitude": 24.609052,
             "longitude": 73.7222131,
-            "situation": "Normal",
+            "situation": "Bad",
             "picture_url": ""
         },
         {
             "serial_number": "DPS_ML12",
-            "area_name": "DPS_M_L12 Area",
+            "area_name": "DPS Road",
             "location_url": "https://maps.google.com/maps?q=24.6090173%2C73.7224608&z=17&hl=en",
             "latitude": 24.6090173,
             "longitude": 73.7224608,
@@ -112,7 +112,7 @@ const treesData = {
         },
         {
             "serial_number": "DPS_ML13",
-            "area_name": "DPS_M_L13 Area",
+            "area_name": "DPS Road",
             "location_url": "https://maps.google.com/maps?q=24.6091479%2C73.7226924&z=17&hl=en",
             "latitude": 24.6091479,
             "longitude": 73.7226924,
@@ -121,7 +121,7 @@ const treesData = {
         },
         {
             "serial_number": "DPS_ML14",
-            "area_name": "DPS_M_L14 Area",
+            "area_name": "DPS Road",
             "location_url": "https://maps.google.com/maps?q=24.609158%2C73.7227405&z=17&hl=en",
             "latitude": 24.609158,
             "longitude": 73.7227405,
@@ -130,20 +130,20 @@ const treesData = {
         },
         {
             "serial_number": "DPS_ML15",
-            "area_name": "DPS_M_L15 Area",
+            "area_name": "DPS Road",
             "location_url": "https://maps.google.com/maps?q=24.6091841%2C73.722807&z=17&hl=en",
             "latitude": 24.6091841,
             "longitude": 73.722807,
-            "situation": "Normal",
+            "situation": "Bad",
             "picture_url": ""
         },
         {
             "serial_number": "DPS_ML16",
-            "area_name": "DPS_M_L16 Area",
+            "area_name": "DPS Road",
             "location_url": "https://maps.google.com/maps?q=24.6091428%2C73.7229016&z=17&hl=en",
             "latitude": 24.6091428,
             "longitude": 73.7229016,
-            "situation": "Bad",
+            "situation": "Normal",
             "picture_url": ""
         },
         {
@@ -152,7 +152,7 @@ const treesData = {
             "location_url": "https://maps.google.com/maps?q=24.60517%2C73.7160494&z=17&hl=en",
             "latitude": 24.60517,
             "longitude": 73.7160494,
-            "situation": "Normal",
+            "situation": "Bad",
             "picture_url": ""
         },
         {
@@ -161,7 +161,7 @@ const treesData = {
             "location_url": "https://maps.google.com/maps?q=24.605452%2C73.7165859&z=17&hl=en",
             "latitude": 24.605452,
             "longitude": 73.7165859,
-            "situation": "Normal",
+            "situation": "Bad",
             "picture_url": ""
         },
         {
@@ -170,7 +170,7 @@ const treesData = {
             "location_url": "https://maps.google.com/maps?q=24.6061188%2C73.716924&z=17&hl=en",
             "latitude": 24.6061188,
             "longitude": 73.716924,
-            "situation": "Normal",
+            "situation": "Bad",
             "picture_url": ""
         },
         {
@@ -188,7 +188,7 @@ const treesData = {
             "location_url": "https://maps.google.com/maps?q=24.6061177%2C73.7167427&z=17&hl=en",
             "latitude": 24.6061177,
             "longitude": 73.7167427,
-            "situation": "Normal",
+            "situation": "Bad",
             "picture_url": ""
         },
         {
@@ -305,7 +305,7 @@ const treesData = {
             "location_url": "https://maps.google.com/maps?q=24.6088787%2C73.7182078&z=17&hl=en",
             "latitude": 24.6088787,
             "longitude": 73.7182078,
-            "situation": "Normal",
+            "situation": "Bad",
             "picture_url": ""
         },
         {
@@ -314,7 +314,7 @@ const treesData = {
             "location_url": "https://maps.google.com/maps?q=24.6089558%2C73.7182594&z=17&hl=en",
             "latitude": 24.6089558,
             "longitude": 73.7182594,
-            "situation": "Normal",
+            "situation": "Bad",
             "picture_url": ""
         },
         {
@@ -341,7 +341,7 @@ const treesData = {
             "location_url": "https://maps.google.com/maps?q=24.6100525%2C73.7185633&z=17&hl=en",
             "latitude": 24.6100525,
             "longitude": 73.7185633,
-            "situation": "Normal",
+            "situation": "Bad",
             "picture_url": ""
         },
         {
@@ -350,7 +350,7 @@ const treesData = {
             "location_url": "https://maps.google.com/maps?q=24.6101589%2C73.718464&z=17&hl=en",
             "latitude": 24.6101589,
             "longitude": 73.718464,
-            "situation": "Normal",
+            "situation": "Bad",
             "picture_url": ""
         },
         {
@@ -359,7 +359,7 @@ const treesData = {
             "location_url": "https://maps.google.com/maps?q=24.6101945%2C73.7183693&z=17&hl=en",
             "latitude": 24.6101945,
             "longitude": 73.7183693,
-            "situation": "Normal",
+            "situation": "Bad",
             "picture_url": ""
         },
         {
@@ -368,7 +368,7 @@ const treesData = {
             "location_url": "https://maps.google.com/maps?q=24.6102677%2C73.7180999&z=17&hl=en",
             "latitude": 24.6102677,
             "longitude": 73.7180999,
-            "situation": "Normal",
+            "situation": "Bad",
             "picture_url": ""
         },
         {
@@ -386,7 +386,7 @@ const treesData = {
             "location_url": "https://maps.google.com/maps?q=24.6103823%2C73.7178719&z=17&hl=en",
             "latitude": 24.6103823,
             "longitude": 73.7178719,
-            "situation": "Normal",
+            "situation": "Bad",
             "picture_url": ""
         },
         {
@@ -440,7 +440,7 @@ const treesData = {
             "location_url": "https://maps.google.com/maps?q=24.6103581%2C73.7182759&z=17&hl=en",
             "latitude": 24.6103581,
             "longitude": 73.7182759,
-            "situation": "Normal",
+            "situation": "Bad",
             "picture_url": ""
         },
         {
@@ -449,7 +449,7 @@ const treesData = {
             "location_url": "https://maps.google.com/maps?q=24.6103486%2C73.7183685&z=17&hl=en",
             "latitude": 24.6103486,
             "longitude": 73.7183685,
-            "situation": "Normal",
+            "situation": "Bad",
             "picture_url": ""
         },
         {
@@ -458,7 +458,7 @@ const treesData = {
             "location_url": "https://maps.google.com/maps?q=24.6103249%2C73.718461&z=17&hl=en",
             "latitude": 24.6103249,
             "longitude": 73.718461,
-            "situation": "Normal",
+            "situation": "Bad",
             "picture_url": ""
         },
         {
@@ -476,7 +476,7 @@ const treesData = {
             "location_url": "https://maps.google.com/maps?q=24.6089652%2C73.7190258&z=17&hl=en",
             "latitude": 24.6089652,
             "longitude": 73.7190258,
-            "situation": "Normal",
+            "situation": "Bad",
             "picture_url": ""
         },
         {
@@ -503,7 +503,7 @@ const treesData = {
             "location_url": "https://maps.google.com/maps?q=24.6089031%2C73.7188276&z=17&hl=en",
             "latitude": 24.6089031,
             "longitude": 73.7188276,
-            "situation": "Normal",
+            "situation": "Bad",
             "picture_url": ""
         },
         {
@@ -512,7 +512,7 @@ const treesData = {
             "location_url": "https://maps.google.com/maps?q=24.6089421%2C73.7188525&z=17&hl=en",
             "latitude": 24.6089421,
             "longitude": 73.7188525,
-            "situation": "Normal",
+            "situation": "Bad",
             "picture_url": ""
         },
         {
@@ -521,7 +521,7 @@ const treesData = {
             "location_url": "https://maps.google.com/maps?q=24.6089274%2C73.71878&z=17&hl=en",
             "latitude": 24.6089274,
             "longitude": 73.71878,
-            "situation": "Normal",
+            "situation": "Bad",
             "picture_url": ""
         },
         {
@@ -530,7 +530,7 @@ const treesData = {
             "location_url": "https://maps.google.com/maps?q=24.6089243%2C73.718705&z=17&hl=en",
             "latitude": 24.6089243,
             "longitude": 73.718705,
-            "situation": "Normal",
+            "situation": "Bad",
             "picture_url": ""
         },
         {
@@ -539,7 +539,7 @@ const treesData = {
             "location_url": "https://maps.google.com/maps?q=24.6089768%2C73.7186322&z=17&hl=en",
             "latitude": 24.6089768,
             "longitude": 73.7186322,
-            "situation": "Normal",
+            "situation": "Bad",
             "picture_url": ""
         },
         {
@@ -548,7 +548,7 @@ const treesData = {
             "location_url": "https://maps.google.com/maps?q=24.6089627%2C73.7186316&z=17&hl=en",
             "latitude": 24.6089627,
             "longitude": 73.7186316,
-            "situation": "Normal",
+            "situation": "Bad",
             "picture_url": ""
         },
         {
@@ -557,7 +557,7 @@ const treesData = {
             "location_url": "https://maps.google.com/maps?q=24.6090125%2C73.7185733&z=17&hl=en",
             "latitude": 24.6090125,
             "longitude": 73.7185733,
-            "situation": "Normal",
+            "situation": "Bad",
             "picture_url": ""
         },
         {
@@ -584,7 +584,7 @@ const treesData = {
             "location_url": "https://maps.google.com/maps?q=24.6084109%2C73.7183754&z=17&hl=en",
             "latitude": 24.6084109,
             "longitude": 73.7183754,
-            "situation": "Normal",
+            "situation": "Bad",
             "picture_url": ""
         },
         {
@@ -629,7 +629,7 @@ const treesData = {
             "location_url": "https://maps.google.com/maps?q=24.6056369%2C73.7198943&z=17&hl=en",
             "latitude": 24.6056369,
             "longitude": 73.7198943,
-            "situation": "Normal",
+            "situation": "Bad",
             "picture_url": ""
         },
         {
@@ -647,7 +647,7 @@ const treesData = {
             "location_url": "https://maps.google.com/maps?q=24.6056169%2C73.7204157&z=17&hl=en",
             "latitude": 24.6056169,
             "longitude": 73.7204157,
-            "situation": "Normal",
+            "situation": "Bad",
             "picture_url": ""
         },
         {
@@ -656,7 +656,7 @@ const treesData = {
             "location_url": "https://maps.google.com/maps?q=24.6056429%2C73.7204967&z=17&hl=en",
             "latitude": 24.6056429,
             "longitude": 73.7204967,
-            "situation": "Normal",
+            "situation": "Bad",
             "picture_url": ""
         },
         {
@@ -701,7 +701,7 @@ const treesData = {
             "location_url": "https://maps.google.com/maps?q=24.6068981%2C73.7245919&z=17&hl=en",
             "latitude": 24.6068981,
             "longitude": 73.7245919,
-            "situation": "Bad",
+            "situation": "Normal",
             "picture_url": ""
         },
         {
@@ -710,7 +710,7 @@ const treesData = {
             "location_url": "https://maps.google.com/maps?q=24.6068983%2C73.7245917&z=17&hl=en",
             "latitude": 24.6068983,
             "longitude": 73.7245917,
-            "situation": "Bad",
+            "situation": "Normal",
             "picture_url": ""
         },
         {
@@ -728,7 +728,7 @@ const treesData = {
             "location_url": "https://maps.google.com/maps?q=24.6069765%2C73.7246966&z=17&hl=en",
             "latitude": 24.6069765,
             "longitude": 73.7246966,
-            "situation": "Bad",
+            "situation": "Normal",
             "picture_url": ""
         },
         {
@@ -773,6 +773,168 @@ const treesData = {
             "location_url": "https://maps.google.com/maps?q=24.6069825%2C73.7249686&z=17&hl=en",
             "latitude": 24.6069825,
             "longitude": 73.7249686,
+            "situation": "Bad",
+            "picture_url": ""
+        },
+        {
+            "serial_number": "20250312_p71",
+            "area_name": "New RTO 100ft Rd",
+            "location_url": "https://maps.google.com/maps?q=24.6065678%2C73.722481&z=17&hl=en",
+            "latitude": 24.6065678,
+            "longitude": 73.722481,
+            "situation": "Normal",
+            "picture_url": ""
+        },
+        {
+            "serial_number": "20250312_p72",
+            "area_name": "New RTO 100ft Rd",
+            "location_url": "https://maps.google.com/maps?q=24.6065652%2C73.7224793&z=17&hl=en",
+            "latitude": 24.6065652,
+            "longitude": 73.7224793,
+            "situation": "Normal",
+            "picture_url": ""
+        },
+        {
+            "serial_number": "20250312_p73",
+            "area_name": "New RTO 100ft Rd",
+            "location_url": "https://maps.google.com/maps?q=24.6066433%2C73.7234402&z=17&hl=en",
+            "latitude": 24.6066433,
+            "longitude": 73.7234402,
+            "situation": "Bad",
+            "picture_url": ""
+        },
+        {
+            "serial_number": "20250312_p74",
+            "area_name": "New RTO 100ft Rd",
+            "location_url": "https://maps.google.com/maps?q=24.6066835%2C73.7236139&z=17&hl=en",
+            "latitude": 24.6066835,
+            "longitude": 73.7236139,
+            "situation": "Bad",
+            "picture_url": ""
+        },
+        {
+            "serial_number": "20250312_p75",
+            "area_name": "New RTO 100ft Rd",
+            "location_url": "https://maps.google.com/maps?q=24.6066853%2C73.7236199&z=17&hl=en",
+            "latitude": 24.6066853,
+            "longitude": 73.7236199,
+            "situation": "Normal",
+            "picture_url": ""
+        },
+        {
+            "serial_number": "20250312_p76",
+            "area_name": "New RTO 100ft Rd",
+            "location_url": "https://maps.google.com/maps?q=24.6067573%2C73.7237602&z=17&hl=en",
+            "latitude": 24.6067573,
+            "longitude": 73.7237602,
+            "situation": "Normal",
+            "picture_url": ""
+        },
+        {
+            "serial_number": "20250312_p77",
+            "area_name": "New RTO 100ft Rd",
+            "location_url": "https://maps.google.com/maps?q=24.6067624%2C73.7238739&z=17&hl=en",
+            "latitude": 24.6067624,
+            "longitude": 73.7238739,
+            "situation": "Normal",
+            "picture_url": ""
+        },
+        {
+            "serial_number": "20250312_p78",
+            "area_name": "New RTO 100ft Rd",
+            "location_url": "https://maps.google.com/maps?q=24.606805%2C73.72394&z=17&hl=en",
+            "latitude": 24.606805,
+            "longitude": 73.72394,
+            "situation": "Normal",
+            "picture_url": ""
+        },
+        {
+            "serial_number": "20250312_p79",
+            "area_name": "New RTO 100ft Rd",
+            "location_url": "https://maps.google.com/maps?q=24.606805%2C73.72394&z=17&hl=en",
+            "latitude": 24.606805,
+            "longitude": 73.72394,
+            "situation": "Bad",
+            "picture_url": ""
+        },
+        {
+            "serial_number": "20250312_p80",
+            "area_name": "New RTO 100ft Rd",
+            "location_url": "https://maps.google.com/maps?q=24.606805%2C73.7241917&z=17&hl=en",
+            "latitude": 24.606805,
+            "longitude": 73.7241917,
+            "situation": "Bad",
+            "picture_url": ""
+        },
+        {
+            "serial_number": "20250312_p81",
+            "area_name": "New RTO 100ft Rd",
+            "location_url": "https://maps.google.com/maps?q=24.6068166%2C73.7242167&z=17&hl=en",
+            "latitude": 24.6068166,
+            "longitude": 73.7242167,
+            "situation": "Bad",
+            "picture_url": ""
+        },
+        {
+            "serial_number": "20250312_p82",
+            "area_name": "New RTO 100ft Rd",
+            "location_url": "https://maps.google.com/maps?q=24.6068712%2C73.7255195&z=17&hl=en",
+            "latitude": 24.6068712,
+            "longitude": 73.7255195,
+            "situation": "Normal",
+            "picture_url": ""
+        },
+        {
+            "serial_number": "20250312_p83",
+            "area_name": "New RTO 100ft Rd",
+            "location_url": "https://maps.google.com/maps?q=24.6068806%2C73.7254724&z=17&hl=en",
+            "latitude": 24.6068806,
+            "longitude": 73.7254724,
+            "situation": "Normal",
+            "picture_url": ""
+        },
+        {
+            "serial_number": "20250312_p84",
+            "area_name": "New RTO 100ft Rd",
+            "location_url": "https://maps.google.com/maps?q=24.6066316%2C73.7242792&z=17&hl=en",
+            "latitude": 24.6066316,
+            "longitude": 73.7242792,
+            "situation": "Bad",
+            "picture_url": ""
+        },
+        {
+            "serial_number": "20250312_p85",
+            "area_name": "New RTO 100ft Rd",
+            "location_url": "https://maps.google.com/maps?q=24.6066053%2C73.724127&z=17&hl=en",
+            "latitude": 24.6066053,
+            "longitude": 73.724127,
+            "situation": "Bad",
+            "picture_url": ""
+        },
+        {
+            "serial_number": "20250312_p86",
+            "area_name": "New RTO 100ft Rd",
+            "location_url": "https://maps.google.com/maps?q=24.606605%2C73.7241267&z=17&hl=en",
+            "latitude": 24.606605,
+            "longitude": 73.7241267,
+            "situation": "Bad",
+            "picture_url": ""
+        },
+        {
+            "serial_number": "20250312_p87",
+            "area_name": "New RTO 100ft Rd",
+            "location_url": "https://maps.google.com/maps?q=24.6065772%2C73.7239627&z=17&hl=en",
+            "latitude": 24.6065772,
+            "longitude": 73.7239627,
+            "situation": "Bad",
+            "picture_url": ""
+        },
+        {
+            "serial_number": "20250312_p88",
+            "area_name": "New RTO 100ft Rd",
+            "location_url": "https://maps.google.com/maps?q=24.6065135%2C73.7236196&z=17&hl=en",
+            "latitude": 24.6065135,
+            "longitude": 73.7236196,
             "situation": "Bad",
             "picture_url": ""
         }
