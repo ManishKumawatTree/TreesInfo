@@ -3,175 +3,150 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tree Locations</title>
+    <title>Tree Care</title>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
-        /* Basic Styles for the Page */
-        body {
-            font-family: Arial, sans-serif;
+        /* Basic Reset */
+        * {
             margin: 0;
             padding: 0;
-            height: 100%;
-            padding-top: 50px; /* Add space to avoid overlap with the fixed header */
+            box-sizing: border-box;
         }
 
-        #map {
-            height: 100vh; /* Full height of the viewport */
-            width: 100%; /* Full width of the screen */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
         }
 
-        /* Fixed Top Header */
-        .header {
+        /* Container for the menu */
+        .menu-container {
+            position: relative;
+        }
+
+        /* The hamburger icon */
+        .hamburger-icon {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+        }
+
+            .hamburger-icon div {
+                width: 25px;
+                height: 4px;
+                background-color: #333;
+                border-radius: 5px;
+            }
+
+        /* The menu itself */
+        .menu {
             position: fixed;
             top: 0;
             left: 0;
-            width: 100%;
+            height: 100%;
+            width: 250px;
             background-color: #333;
+            margin-top: 70px;
             color: white;
-            padding: 10px;
-            font-size: 16px;
+            transform: translateX(-100%); /* Initially hidden */
+            transition: transform 0.3s ease-in-out;
+            padding: 20px;
             z-index: 1000;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
         }
 
-            .header div {
-                padding: 5px 10px;
+            .menu.active {
+                transform: translateX(0); /* Show the menu */
             }
 
-        /* Popup Content Styles */
-        .popup-content {
-            max-width: 400px;
-            padding: 10px;
-            background-color: #f4f4f4;
-            border-radius: 8px;
-            text-align: center;
-        }
-
-            .popup-content img {
-                max-width: 100%;
-                height: auto;
-                border-radius: 8px;
+            /* Menu items */
+            .menu a {
+                color: white;
+                text-decoration: none;
+                font-size: 18px;
+                padding: 15px 0;
+                display: block;
+                transition: background-color 0.3s;
+                margin-bottom: 10px;
+                font-weight: bold;
             }
 
-            .popup-content h3 {
-                margin-top: 10px;
-                font-size: 1.2em;
+                .menu a:hover {
+                    background-color: #444;
+                }
+
+                /* Add icons to menu items */
+                .menu a i {
+                    margin-right: 10px;
+                }
+
+            /* Content of the page */
+            .content {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+                padding-top: 30px; /* Adds space from top */
+                height: 100%; /* Ensures content takes full height */
+                text-align: center; /* Centers text */
             }
 
-            .popup-content p {
-                margin: 5px 0;
+            .content h3 {
+                font-size: 1.5rem;
+                margin-bottom: 20px;
             }
 
-        /* Media Query for Responsiveness */
-        @media (max-width: 600px) {
-            .popup-content {
-                max-width: 350px;
+            .content p {
+                font-size: 1.2rem;
+                width: 80%;
+                max-width: 600px;
             }
-        }
     </style>
-
-    <script src="treeData.js"></script>
-
 </head>
 <body>
 
-    <!-- Fixed Header -->
-    <div class="header">
-        <div id="totalTrees">Total Trees: 0</div>
-        <div id="normalTrees">Normal Trees: 0</div>
-        <div id="badTrees">Bad Trees: 0</div>
+    <div class="menu-container">
+        <!-- Hamburger Icon -->
+        <div class="hamburger-icon" id="hamburgerIcon">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <!-- Menu -->
+        <div class="menu" id="menu">
+            <a href="index.html"><i class="fas fa-home"></i> Home</a>
+            <a href="view.html"><i class="fas fa-eye"></i> View</a>
+            <a href="map.html"><i class="fas fa-map-marker-alt"></i> Map</a>
+            <a href="about.html"><i class="fas fa-info-circle"></i> About</a>
+            <a href="contact.html"><i class="fas fa-phone-alt"></i> Contact</a>
+            <a href="feedback.html"><i class="fas fa-comment-dots"></i> Feedback</a>
+        </div>
+    </div>
+
+    <!-- Page Content -->
+    <div class="content">
+        <h3>Welcome to Tree Care</h3>
+        <p>This is an example of a responsive hamburger menu that works on mobile and desktop. Click the hamburger icon to see the menu options.</p>
     </div>
 
     <script>
-        const treeNormal = "data:image/svg+xml;utf8;base64,PHN2ZyBpZD0iU3ZnanNTdmcxMDcwIiB3aWR0aD0iMjg4IiBoZWlnaHQ9IjI4OCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2ZXJzaW9uPSIxLjEiIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4bWxuczpzdmdqcz0iaHR0cDovL3N2Z2pzLmNvbS9zdmdqcyI+PGRlZnMgaWQ9IlN2Z2pzRGVmczEwNzEiPjwvZGVmcz48ZyBpZD0iU3ZnanNHMTA3MiI+PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjI4OCIgaGVpZ2h0PSIyODgiPjxwYXRoIGZpbGw9IiM4MDU3NGQiIGQ9Ik04IDE2YTMuOTkgMy45OSAwIDAgMSA0IDR2OGMwIDIuMjE2LTEuNzg0IDQtNCA0aDE1Yy0yLjIxNiAwLTQtMS43ODQtNC00di04YTMuOTkxIDMuOTkxIDAgMCAxIDQtNCIgY2xhc3M9ImNvbG9yZjA1NTQyIHN2Z1NoYXBlIj48L3BhdGg+PHBhdGggZmlsbD0iIzAxYWQzMSIgZD0iTTIyIDE0LjIxN2E2LjUgNi41IDAgMCAxLTYuNSA2LjUgNi41IDYuNSAwIDAgMS02LjUtNi41IDYuNSA2LjUgMCAwIDEgNi41LTYuNSA2LjUgNi41IDAgMCAxIDYuNSA2LjV6IiBjbGFzcz0iY29sb3IyNWIzOWUgc3ZnU2hhcGUiPjwvcGF0aD48cGF0aCBmaWxsPSIjMDFhZDMxIiBkPSJNMjIgNy41YTYuNSA2LjUgMCAwIDEtNi41IDYuNUE2LjUgNi41IDAgMCAxIDkgNy41IDYuNSA2LjUgMCAwIDEgMTUuNSAxIDYuNSA2LjUgMCAwIDEgMjIgNy41eiIgY2xhc3M9ImNvbG9yMjViMzllIHN2Z1NoYXBlIj48L3BhdGg+PHBhdGggZmlsbD0iIzAxYWQzMSIgZD0iTTE1IDE0YTYgNiAwIDAgMS02IDYgNiA2IDAgMCAxLTYtNiA2IDYgMCAwIDEgNi02IDYgNiAwIDAgMSA2IDZ6bTEzIDBhNiA2IDAgMCAxLTYgNiA2IDYgMCAwIDEtNi02IDYgNiAwIDAgMSA2LTYgNiA2IDAgMCAxIDYgNnoiIGNsYXNzPSJjb2xvcjI1YjM5ZSBzdmdTaGFwZSI+PC9wYXRoPjxwYXRoIHN0eWxlPSJsaW5lLWhlaWdodDpub3JtYWw7dGV4dC1pbmRlbnQ6MDt0ZXh0LWFsaWduOnN0YXJ0O3RleHQtZGVjb3JhdGlvbi1saW5lOm5vbmU7dGV4dC1kZWNvcmF0aW9uLXN0eWxlOnNvbGlkO3RleHQtZGVjb3JhdGlvbi1jb2xvcjojMDAwO3RleHQtdHJhbnNmb3JtOm5vbmU7YmxvY2stcHJvZ3Jlc3Npb246dGI7aXNvbGF0aW9uOmF1dG87bWl4LWJsZW5kLW1vZGU6bm9ybWFsIiBmaWxsPSIjNjBjNWI4IiBkPSJNLTUyNy44NCAxMzY0Ljg1MmEuNS41IDAgMCAwLS4wMzMgMCA1LjAwNSA1LjAwNSAwIDAgMC00LjUyNyA0LjA1Mi41LjUgMCAxIDAgLjk4Mi4xODggMy45OTYgMy45OTYgMCAwIDEgMy42MjEtMy4yNDIuNS41IDAgMSAwLS4wNDMtMXptLTguMTg3IDcuNTI1YS41LjUgMCAwIDAtLjIyMS4wNyA0LjUwMyA0LjUwMyAwIDAgMC0xLjU4NiA2LjIyNi41LjUgMCAxIDAgLjg1NC0uNTE5IDMuNDk5IDMuNDk5IDAgMCAxIDEuMjM0LTQuODQyLjUuNSAwIDAgMC0uMjgxLS45MzV6IiBjb2xvcj0iIzAwMCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtd2VpZ2h0PSI0MDAiIG92ZXJmbG93PSJ2aXNpYmxlIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg1NDIuOTg4IC0xMzYyLjMzOSkiIGNsYXNzPSJjb2xvcjYwYzViOCBzdmdTaGFwZSI+PC9wYXRoPjwvc3ZnPjwvZz48L3N2Zz4=";
-        const treeBad = "data:image/svg+xml;utf8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiI+PHBhdGggZmlsbD0iI2YwNTU0MiIgZD0iTTggMTZhMy45OSAzLjk5IDAgMCAxIDQgNHY4YzAgMi4yMTYtMS43ODQgNC00IDRoMTVjLTIuMjE2IDAtNC0xLjc4NC00LTR2LThhMy45OTEgMy45OTEgMCAwIDEgNC00Ii8+PHBhdGggZmlsbD0iIzI1YjM5ZSIgZD0iTTIyIDE0LjIxN2E2LjUgNi41IDAgMCAxLTYuNSA2LjUgNi41IDYuNSAwIDAgMS02LjUtNi41IDYuNSA2LjUgMCAwIDEgNi41LTYuNSA2LjUgNi41IDAgMCAxIDYuNSA2LjV6Ii8+PHBhdGggZmlsbD0iIzI1YjM5ZSIgZD0iTTIyIDcuNWE2LjUgNi41IDAgMCAxLTYuNSA2LjVBNi41IDYuNSAwIDAgMSA5IDcuNSA2LjUgNi41IDAgMCAxIDE1LjUgMSA2LjUgNi41IDAgMCAxIDIyIDcuNXoiLz48cGF0aCBmaWxsPSIjMjViMzllIiBkPSJNMTUgMTRhNiA2IDAgMCAxLTYgNiA2IDYgMCAwIDEtNi02IDYgNiAwIDAgMSA2LTYgNiA2IDAgMCAxIDYgNnptMTMgMGE2IDYgMCAwIDEtNiA2IDYgNiAwIDAgMS02LTYgNiA2IDAgMCAxIDYtNiA2IDYgMCAwIDEgNiA2eiIvPjxwYXRoIHN0eWxlPSJsaW5lLWhlaWdodDpub3JtYWw7dGV4dC1pbmRlbnQ6MDt0ZXh0LWFsaWduOnN0YXJ0O3RleHQtZGVjb3JhdGlvbi1saW5lOm5vbmU7dGV4dC1kZWNvcmF0aW9uLXN0eWxlOnNvbGlkO3RleHQtZGVjb3JhdGlvbi1jb2xvcjojMDAwO3RleHQtdHJhbnNmb3JtOm5vbmU7YmxvY2stcHJvZ3Jlc3Npb246dGI7aXNvbGF0aW9uOmF1dG87bWl4LWJsZW5kLW1vZGU6bm9ybWFsIiBmaWxsPSIjNjBjNWI4IiBkPSJNLTUyNy44NCAxMzY0Ljg1MmEuNS41IDAgMCAwLS4wMzMgMCA1LjAwNSA1LjAwNSAwIDAgMC00LjUyNyA0LjA1Mi41LjUgMCAxIDAgLjk4Mi4xODggMy45OTYgMy45OTYgMCAwIDEgMy42MjEtMy4yNDIuNS41IDAgMSAwLS4wNDMtMXptLTguMTg3IDcuNTI1YS41LjUgMCAwIDAtLjIyMS4wNyA0LjUwMyA0LjUwMyAwIDAgMC0xLjU4NiA2LjIyNi41LjUgMCAxIDAgLjg1NC0uNTE5IDMuNDk5IDMuNDk5IDAgMCAxIDEuMjM0LTQuODQyLjUuNSAwIDAgMC0uMjgxLS45MzV6IiBjb2xvcj0iIzAwMCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtd2VpZ2h0PSI0MDAiIG92ZXJmbG93PSJ2aXNpYmxlIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg1NDIuOTg4IC0xMzYyLjMzOSkiLz48L3N2Zz4=";
+        // Get the elements
+        const hamburgerIcon = document.getElementById('hamburgerIcon');
+        const menu = document.getElementById('menu');
 
-        // Calculate total trees, normal trees, and bad trees
-        function updateTreeCount(treesData) {
-            const totalTrees = treesData.Trees.length;
-            const normalTrees = treesData.Trees.filter(tree => tree.situation === "Normal").length;
-            const badTrees = treesData.Trees.filter(tree => tree.situation === "Bad").length;
-
-            // Update the header with the counts
-            document.getElementById("totalTrees").innerText = `Total Trees : ${totalTrees}`;
-            document.getElementById("normalTrees").innerText = `Normal : ${normalTrees}`;
-            document.getElementById("badTrees").innerText = `Bad : ${badTrees}`;
-        }
-
-        // Set interval to check every 100 milliseconds
-        var interval = setInterval(function () {
-            // Find the button by its class name
-            var button = document.querySelector('.dismissButton');
-
-            // If button exists, click it and stop the interval
-            if (button) {
-                button.click();  // Simulate a click
-                clearInterval(interval);  // Stop the interval
-                //console.log("Button clicked and interval stopped.");
-
-                //sessionStorage.clear();
-
-                // Clear local storage
-                //localStorage.clear();
-            }
-        }, 50);  // Check every 50 milliseconds
-
-        // Initialize Google Map
-        function initMap() {
-            const map = new google.maps.Map(document.getElementById("map"), {
-                zoom: 15,
-                center: { lat: 24.6057335, lng: 73.7204401 } // Default center (near the first tree)
-            });
-
-            // Update tree counts on the page
-            updateTreeCount(treesData);
-
-            treesData.Trees.forEach((tree) => {
-                tree.picture_url = `images/${tree.serial_number}.jpg`;
-
-                // Set the marker icon based on the tree situation
-                let markerIcon = tree.situation === "Normal" ? treeNormal : tree.situation === "Bad" ? treeBad : treeNormal;
-
-                // Resize the icon if it's too big
-                const iconSize = new google.maps.Size(32, 32); // Set your desired width and height (32x32 for example)
-
-                const marker = new google.maps.Marker({
-                    position: { lat: tree.latitude, lng: tree.longitude },
-                    map: map,
-                    title: tree.area_name,
-                    icon: {
-                        url: markerIcon,         // Base64 string for the icon
-                        scaledSize: iconSize     // Resize the icon to fit your needs
-                    }
-                });
-
-                const contentString = `
-                            <div class="popup-content">
-                                <p><strong>${tree.area_name}</strong></p>
-                                <img src="${tree.picture_url}" alt="Tree Image">
-                                <p><strong>Tree Situation: ${tree.situation}</strong></p>
-                                <p><strong>Serial Number: ${tree.serial_number}   <a href="${tree.location_url}" target="_blank">View Maps</a></strong></p>
-                            </div>
-                        `;
-
-                const infowindow = new google.maps.InfoWindow({
-                    content: contentString
-                });
-
-                marker.addListener("click", function () {
-                    infowindow.open(map, marker);
-                });
-            });
-        }
+        // Toggle menu visibility when the hamburger icon is clicked
+        hamburgerIcon.addEventListener('click', () => {
+            menu.classList.toggle('active');
+        });
     </script>
-
-
-    <!-- Google Map container -->
-    <div id="map"></div>
-
-    <!-- Google Maps API Script -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDnt6Uk8Q_pjSeLWbo8YrheoMJssS5RFPw&callback=initMap" async defer></script>
 
 </body>
 </html>
