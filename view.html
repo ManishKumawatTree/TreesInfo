@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tree Care - View</title>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            height: 100vh; /* Ensure full height */
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Container for the menu */
+        .menu-container {
+            position: relative;
+        }
+
+        /* The hamburger icon */
+        .hamburger-icon {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+            .hamburger-icon div {
+                width: 25px;
+                height: 4px;
+                background-color: #333;
+                border-radius: 5px;
+            }
+
+        /* The menu itself */
+        .menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 250px;
+            background-color: #333;
+            margin-top: 70px;
+            color: white;
+            transform: translateX(-100%); /* Initially hidden */
+            transition: transform 0.3s ease-in-out;
+            padding: 20px;
+            z-index: 1000;
+        }
+
+            .menu.active {
+                transform: translateX(0); /* Show the menu */
+            }
+
+            /* Menu items */
+            .menu a {
+                color: white;
+                text-decoration: none;
+                font-size: 18px;
+                padding: 15px 0;
+                display: block;
+                transition: background-color 0.3s;
+                margin-bottom: 10px;
+                font-weight: bold;
+            }
+
+                .menu a:hover {
+                    background-color: #444;
+                }
+
+                .menu a i {
+                    margin-right: 10px;
+                }
+
+        /* Gallery Container Styling */
+        .gallery-container {
+            width: 100%;
+            height: calc(100vh - 100px); /* Adjust height to account for top and bottom bars */
+            margin-top: 50px; /* Space for top bar */
+            margin-bottom: 50px; /* Space for bottom bar */
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Top Bar - Fixed Position */
+        .top-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            z-index: 1000;
+            height: 50px;
+        }
+
+        /* Bottom InfoBar - Fixed Position */
+        .info-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            height: 50px;
+        }
+
+            .info-bar .prev-button, .info-bar .next-button {
+                background-color: rgba(0, 0, 0, 0.5);
+                color: white;
+                border: none;
+                padding: 10px;
+                border-radius: 50%;
+                font-size: 20px;
+                cursor: pointer;
+            }
+
+                .info-bar .prev-button:hover, .info-bar .next-button:hover {
+                    background-color: rgba(0, 0, 0, 0.8);
+                }
+
+        .gallery-slide {
+            display: flex;
+            transition: transform 0.3s ease;
+            touch-action: pan-y; /* Enable swipe behavior */
+            height: 100%;
+        }
+
+        .gallery-item {
+            flex: 0 0 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            height: 100%;
+        }
+
+        /* Adjust image size */
+        .gallery-image {
+            width: auto;
+            height: 100%; /* Make the image fill the container height */
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .galleryTitle {
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hamburger Menu and Menu Items -->
+    <div class="menu-container">
+        <!-- Hamburger Icon -->
+        <div class="hamburger-icon" id="hamburgerIcon">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <!-- Menu -->
+        <div class="menu" id="menu">
+            <a href="index.html"><i class="fas fa-home"></i> Home</a>
+            <a href="view.html"><i class="fas fa-eye"></i> View</a>
+            <a href="map.html"><i class="fas fa-map-marker-alt"></i> Map</a>
+            <a href="about.html"><i class="fas fa-info-circle"></i> About</a>
+            <a href="contact.html"><i class="fas fa-phone-alt"></i> Contact</a>
+            <a href="feedback.html"><i class="fas fa-comment-dots"></i> Feedback</a>
+        </div>
+    </div>
+
+    <!-- Gallery Container -->
+    <div class="gallery-container">
+        <!-- Top Bar -->
+        <div class="top-bar">
+            <div class="galleryTitle" id="galleryTitle">Gallery</div>
+        </div>
+
+        <div class="gallery-slide" id="gallery-slide">
+            <!-- Dynamic gallery items will be inserted here -->
+        </div>
+    </div>
+
+    <!-- Info Bar with Navigation -->
+    <div class="info-bar">
+        <button class="prev-button" id="prevButton">&#10094;</button>
+        <div id="infoText">Serial: -- | Situation: --</div>
+        <button class="next-button" id="nextButton">&#10095;</button>
+    </div>
+
+    <script src="treeData.js"></script>
+    <script>
+        // Hamburger Menu Toggle
+        const hamburgerIcon = document.getElementById('hamburgerIcon');
+        const menu = document.getElementById('menu');
+
+        hamburgerIcon.addEventListener('click', () => {
+            menu.classList.toggle('active');
+        });
+
+        const prevButton = document.getElementById('prevButton');
+        const nextButton = document.getElementById('nextButton');
+        const gallerySlide = document.getElementById('gallery-slide');
+        const galleryTitle = document.getElementById('galleryTitle');
+        const infoText = document.getElementById('infoText');
+        let currentIndex = 0;
+
+        // Function to create gallery items dynamically
+        function renderGallery() {
+            const trees = treesData.Trees;
+            gallerySlide.innerHTML = '';
+
+            trees.forEach((tree, index) => {
+                tree.picture_url = `images/${tree.serial_number}.jpg`;
+
+                const galleryItem = document.createElement('div');
+                galleryItem.classList.add('gallery-item');
+
+                const image = document.createElement('img');
+                image.classList.add('gallery-image');
+                image.src = tree.picture_url || 'https://via.placeholder.com/400'; // Placeholder image if no picture_url
+
+                galleryItem.appendChild(image);
+                gallerySlide.appendChild(galleryItem);
+            });
+
+            galleryTitle.innerHTML = trees[currentIndex].area_name;
+            infoText.innerHTML = `Serial: ${trees[currentIndex].serial_number} | Situation: ${trees[currentIndex].situation}`;
+        }
+
+        // Function to update the slider
+        function updateSlider() {
+            const slideWidth = document.querySelector('.gallery-item').offsetWidth;
+            gallerySlide.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+        }
+
+        prevButton.addEventListener('click', () => {
+            currentIndex = (currentIndex === 0) ? treesData.Trees.length - 1 : currentIndex - 1;
+            updateSlider();
+            galleryTitle.innerHTML = treesData.Trees[currentIndex].area_name;
+            infoText.innerHTML = `Serial: ${treesData.Trees[currentIndex].serial_number} | Situation: ${treesData.Trees[currentIndex].situation}`;
+        });
+
+        nextButton.addEventListener('click', () => {
+            currentIndex = (currentIndex === treesData.Trees.length - 1) ? 0 : currentIndex + 1;
+            updateSlider();
+            galleryTitle.innerHTML = treesData.Trees[currentIndex].area_name;
+            infoText.innerHTML = `Serial: ${treesData.Trees[currentIndex].serial_number} | Situation: ${treesData.Trees[currentIndex].situation}`;
+        });
+
+        // Swipe handling for mobile devices
+        let startX, endX;
+
+        gallerySlide.addEventListener('touchstart', function (e) {
+            startX = e.touches[0].clientX;
+        });
+
+        gallerySlide.addEventListener('touchmove', function (e) {
+            endX = e.touches[0].clientX;
+        });
+
+        gallerySlide.addEventListener('touchend', function () {
+            if (startX - endX > 50) {
+                currentIndex = (currentIndex === treesData.Trees.length - 1) ? 0 : currentIndex + 1;
+                updateSlider();
+                galleryTitle.innerHTML = treesData.Trees[currentIndex].area_name;
+                infoText.innerHTML = `Serial: ${treesData.Trees[currentIndex].serial_number} | Situation: ${treesData.Trees[currentIndex].situation}`;
+            } else if (endX - startX > 50) {
+                currentIndex = (currentIndex === 0) ? treesData.Trees.length - 1 : currentIndex - 1;
+                updateSlider();
+                galleryTitle.innerHTML = treesData.Trees[currentIndex].area_name;
+                infoText.innerHTML = `Serial: ${treesData.Trees[currentIndex].serial_number} | Situation: ${treesData.Trees[currentIndex].situation}`;
+            }
+        });
+
+        // Initialize the gallery and slider
+        renderGallery();
+        updateSlider();
+    </script>
+
+</body>
+</html>
