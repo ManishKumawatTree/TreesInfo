@@ -1,0 +1,134 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+}
+
+/* Container for the menu */
+.menu-container {
+    position: relative;
+}
+
+/* The hamburger icon */
+.hamburger-icon {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.hamburger-icon div {
+    width: 25px;
+    height: 4px;
+    background-color: #333;
+    border-radius: 5px;
+}
+
+/* The menu itself */
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    background-color: #333;
+    margin-top: 70px;
+    color: white;
+    transform: translateX(-100%); /* Initially hidden */
+    transition: transform 0.3s ease-in-out;
+    padding: 20px;
+    z-index: 1000;
+}
+
+.menu.active {
+    transform: translateX(0); /* Show the menu */
+}
+
+/* Menu items */
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 15px 0;
+    display: block;
+    transition: background-color 0.3s;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.menu a:hover {
+    background-color: #444;
+}
+
+/* Add icons to menu items */
+.menu a i {
+    margin-right: 10px;
+}
+
+/* Content of the page */
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 30px; /* Adds space from top */
+    height: 100%; /* Ensures content takes full height */
+    text-align: center; /* Centers text */
+}
+
+.content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.content p {
+    font-size: 1.2rem;
+    width: 80%;
+    max-width: 600px;
+}
+
+/* Team image */
+.team-image {
+    margin-top: 30px;
+}
+
+.portrait {
+    width: 200px;
+    height: auto;
+    border-radius: 50%;
+}
+
+/* Gallery Images */
+.gallery {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.gallery-image {
+    width: 200px;
+    height: auto;
+    margin: 0 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Version Display */
+.menu .version {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #aaa;
+}
