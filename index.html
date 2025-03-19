@@ -4,111 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tree Care</title>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="styles.css">
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <style>
-        /* Basic Reset */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            margin: 0;
-        }
-
-        /* Container for the menu */
-        .menu-container {
-            position: relative;
-        }
-
-        /* The hamburger icon */
-        .hamburger-icon {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            width: 30px;
-            height: 30px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: center;
-            cursor: pointer;
-        }
-
-            .hamburger-icon div {
-                width: 25px;
-                height: 4px;
-                background-color: #333;
-                border-radius: 5px;
-            }
-
-        /* The menu itself */
-        .menu {
-            position: fixed;
-            top: 0;
-            left: 0;
-            height: 100%;
-            width: 250px;
-            background-color: #333;
-            margin-top: 70px;
-            color: white;
-            transform: translateX(-100%); /* Initially hidden */
-            transition: transform 0.3s ease-in-out;
-            padding: 20px;
-            z-index: 1000;
-        }
-
-            .menu.active {
-                transform: translateX(0); /* Show the menu */
-            }
-
-            /* Menu items */
-            .menu a {
-                color: white;
-                text-decoration: none;
-                font-size: 18px;
-                padding: 15px 0;
-                display: block;
-                transition: background-color 0.3s;
-                margin-bottom: 10px;
-                font-weight: bold;
-            }
-
-                .menu a:hover {
-                    background-color: #444;
-                }
-
-                /* Add icons to menu items */
-                .menu a i {
-                    margin-right: 10px;
-                }
-
-            /* Content of the page */
-            .content {
-                display: flex;
-                flex-direction: column;
-                justify-content: flex-start;
-                align-items: center;
-                padding-top: 30px; /* Adds space from top */
-                height: 100%; /* Ensures content takes full height */
-                text-align: center; /* Centers text */
-            }
-
-            .content h3 {
-                font-size: 1.5rem;
-                margin-bottom: 20px;
-            }
-
-            .content p {
-                font-size: 1.2rem;
-                width: 80%;
-                max-width: 600px;
-            }
-    </style>
 </head>
 <body>
 
@@ -128,16 +27,57 @@
             <a href="about.html"><i class="fas fa-info-circle"></i> About</a>
             <a href="contact.html"><i class="fas fa-phone-alt"></i> Contact</a>
             <a href="feedback.html"><i class="fas fa-comment-dots"></i> Feedback</a>
+            <div class="version" id="versionInfo"></div> <!-- Version Display -->
         </div>
     </div>
 
     <!-- Page Content -->
     <div class="content">
-        <h3>Welcome to Tree Care</h3>
-        <p>This is an example of a responsive hamburger menu that works on mobile and desktop. Click the hamburger icon to see the menu options.</p>
+        <h3>We Care for Trees</h3>
+        <p>
+            We are committed to caring for the trees growing along the roadside. Over time, we have observed that the tree guards surrounding these trees are causing harm to their growth. These guards, initially intended to protect the trees, end up restricting their natural expansion.
+        </p>
+        <p>
+            As the trees mature, we recognize the need to remove these guards to allow the trees to grow freely. We are actively working to cut these guards and leave them behind, giving the trees enough space to continue their healthy growth. Our team is dedicated to improving the environment, and we continue to monitor and maintain these roadside trees.
+        </p>
+
+        <!-- Team Portrait Image -->
+        <div class="team-image">
+            <img src="team.jpg" alt="Our Team" class="portrait">
+        </div>
+
+        <!-- Gallery with Horizontal Scroll -->
+        <div class="gallery">
+            <img src="tree1.jpg" alt="Tree Care in Action" class="gallery-image">
+            <img src="tree2.jpg" alt="Mature Tree Growth" class="gallery-image">
+            <img src="tree3.jpg" alt="Removing Harmful Guards" class="gallery-image">
+            <img src="tree4.jpg" alt="Healthy Tree Growth" class="gallery-image">
+            <!-- Add more images as needed -->
+        </div>
     </div>
 
     <script>
+        // Define the new version (hardcoded)
+        const NEW_VERSION = '1.0.1'; // Change this when you update the version
+        const storedVersion = localStorage.getItem('version');
+
+        // Function to check if the version has changed
+        function checkForVersionUpdate() {
+            if (storedVersion !== NEW_VERSION) {
+                alert("Updated with new version");
+                // If versions don't match, reload the page and clear cache
+                localStorage.setItem('version', NEW_VERSION);
+                location.reload(true); // Forces cache clear and reloads the page
+            }
+        }
+
+        // Run version check on page load
+        checkForVersionUpdate();
+        const versionInfo = document.getElementById('versionInfo');
+
+        // Display the version number in the menu
+        versionInfo.innerText = `Version: ${NEW_VERSION}`;
+
         // Get the elements
         const hamburgerIcon = document.getElementById('hamburgerIcon');
         const menu = document.getElementById('menu');
