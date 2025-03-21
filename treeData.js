@@ -1243,6 +1243,15 @@ const treesData = {
       "longitude": 73.7147973,
       "situation": "Bad",
       "picture_url": ""
-    }
+    },
+    {
+      "serial_number": "20250321_p123",
+      "area_name": "Meera Nagar",
+      "location_url": "https://maps.google.com/maps?q=24.6182472%2C73.7195474&z=17&hl=en",
+      "latitude": 24.6182472,
+      "longitude": 73.7195474,
+      "situation": "Bad",
+      "picture_url": ""
+    }    
     ]
 };
