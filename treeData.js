@@ -1304,7 +1304,7 @@ const treesData = {
       "location_url": "https://maps.google.com/maps?q=24.6074869%2C73.7267266&z=17&hl=en",
       "latitude": 24.6074869,
       "longitude": 73.7267266,
-      "situation": "Bad",
+      "situation": "Normal",
       "picture_url": ""
     },
     {
@@ -1322,7 +1322,7 @@ const treesData = {
       "location_url": "https://maps.google.com/maps?q=24.6076743%2C73.7269446&z=17&hl=en",
       "latitude": 24.6076743,
       "longitude": 73.7269446,
-      "situation": "Bad",
+      "situation": "Normal",
       "picture_url": ""
     },
     {
@@ -1412,7 +1412,7 @@ const treesData = {
       "location_url": "https://maps.google.com/maps?q=24.6068361%2C73.725562&z=17&hl=en",
       "latitude": 24.6068361,
       "longitude": 73.725562,
-      "situation": "Bad",
+      "situation": "Normal",
       "picture_url": ""
     },
     {
@@ -1421,7 +1421,7 @@ const treesData = {
       "location_url": "https://maps.google.com/maps?q=24.6068477%2C73.7254804&z=17&hl=en",
       "latitude": 24.6068477,
       "longitude": 73.7254804,
-      "situation": "Bad",
+      "situation": "Normal",
       "picture_url": ""
     }
     ]
