@@ -1252,6 +1252,177 @@ const treesData = {
       "longitude": 73.7195474,
       "situation": "Bad",
       "picture_url": ""
-    }    
+    },
+    {
+      "serial_number": "20250322_p124.jpg",
+      "area_name": "New Shobhagpura Bypass Rd",
+      "location_url": "https://maps.google.com/maps?q=24.6073828%2C73.7264931&z=17&hl=en",
+      "latitude": 24.6073828,
+      "longitude": 73.7264931,
+      "situation": "Bad",
+      "picture_url": ""
+    },
+    {
+      "serial_number": "20250322_p125.jpg",
+      "area_name": "New Shobhagpura Bypass Rd",
+      "location_url": "https://maps.google.com/maps?q=24.6072899%2C73.7265056&z=17&hl=en",
+      "latitude": 24.6072899,
+      "longitude": 73.7265056,
+      "situation": "Bad",
+      "picture_url": ""
+    },
+    {
+      "serial_number": "20250322_p126.jpg",
+      "area_name": "New Shobhagpura Bypass Rd",
+      "location_url": "https://maps.google.com/maps?q=24.6072952%2C73.7264524&z=17&hl=en",
+      "latitude": 24.6072952,
+      "longitude": 73.7264524,
+      "situation": "Bad",
+      "picture_url": ""
+    },
+    {
+      "serial_number": "20250322_p127.jpg",
+      "area_name": "New Shobhagpura Bypass Rd",
+      "location_url": "https://maps.google.com/maps?q=24.6073586%2C73.7266114&z=17&hl=en",
+      "latitude": 24.6073586,
+      "longitude": 73.7266114,
+      "situation": "Bad",
+      "picture_url": ""
+    },
+    {
+      "serial_number": "20250322_p128.jpg",
+      "area_name": "New Shobhagpura Bypass Rd",
+      "location_url": "https://maps.google.com/maps?q=24.607456%2C73.7265897&z=17&hl=en",
+      "latitude": 24.607456,
+      "longitude": 73.7265897,
+      "situation": "Bad",
+      "picture_url": ""
+    },
+    {
+      "serial_number": "20250322_p129.jpg",
+      "area_name": "New Shobhagpura Bypass Rd",
+      "location_url": "https://maps.google.com/maps?q=24.6074869%2C73.7267266&z=17&hl=en",
+      "latitude": 24.6074869,
+      "longitude": 73.7267266,
+      "situation": "Bad",
+      "picture_url": ""
+    },
+    {
+      "serial_number": "20250322_p130.jpg",
+      "area_name": "New Shobhagpura Bypass Rd",
+      "location_url": "https://maps.google.com/maps?q=24.6074164%2C73.7267585&z=17&hl=en",
+      "latitude": 24.6074164,
+      "longitude": 73.7267585,
+      "situation": "Bad",
+      "picture_url": ""
+    },
+    {
+      "serial_number": "20250322_p131.jpg",
+      "area_name": "New Shobhagpura Bypass Rd",
+      "location_url": "https://maps.google.com/maps?q=24.6076743%2C73.7269446&z=17&hl=en",
+      "latitude": 24.6076743,
+      "longitude": 73.7269446,
+      "situation": "Bad",
+      "picture_url": ""
+    },
+    {
+      "serial_number": "20250322_p132.jpg",
+      "area_name": "New Shobhagpura Bypass Rd",
+      "location_url": "https://maps.google.com/maps?q=24.6075785%2C73.7270078&z=17&hl=en",
+      "latitude": 24.6075785,
+      "longitude": 73.7270078,
+      "situation": "Bad",
+      "picture_url": ""
+    },
+    {
+      "serial_number": "20250322_p133.jpg",
+      "area_name": "New Shobhagpura Bypass Rd",
+      "location_url": "https://maps.google.com/maps?q=24.6075801%2C73.7271143&z=17&hl=en",
+      "latitude": 24.6075801,
+      "longitude": 73.7271143,
+      "situation": "Bad",
+      "picture_url": ""
+    },
+    {
+      "serial_number": "20250322_p134.jpg",
+      "area_name": "New Shobhagpura Bypass Rd",
+      "location_url": "https://maps.google.com/maps?q=24.6072671%2C73.726619&z=17&hl=en",
+      "latitude": 24.6072671,
+      "longitude": 73.726619,
+      "situation": "Bad",
+      "picture_url": ""
+    },
+    {
+      "serial_number": "20250322_p135.jpg",
+      "area_name": "New Shobhagpura Bypass Rd",
+      "location_url": "https://maps.google.com/maps?q=24.6072435%2C73.7265558&z=17&hl=en",
+      "latitude": 24.6072435,
+      "longitude": 73.7265558,
+      "situation": "Bad",
+      "picture_url": ""
+    },
+    {
+      "serial_number": "20250322_p136.jpg",
+      "area_name": "New Shobhagpura Bypass Rd",
+      "location_url": "https://maps.google.com/maps?q=24.6071795%2C73.7264894&z=17&hl=en",
+      "latitude": 24.6071795,
+      "longitude": 73.7264894,
+      "situation": "Bad",
+      "picture_url": ""
+    },
+    {
+      "serial_number": "20250322_p137.jpg",
+      "area_name": "New Shobhagpura Bypass Rd",
+      "location_url": "https://maps.google.com/maps?q=24.607153%2C73.7264119&z=17&hl=en",
+      "latitude": 24.607153,
+      "longitude": 73.7264119,
+      "situation": "Bad",
+      "picture_url": ""
+    },
+    {
+      "serial_number": "20250322_p138.jpg",
+      "area_name": "New Shobhagpura Bypass Rd",
+      "location_url": "https://maps.google.com/maps?q=24.6070796%2C73.7261508&z=17&hl=en",
+      "latitude": 24.6070796,
+      "longitude": 73.7261508,
+      "situation": "Bad",
+      "picture_url": ""
+    },
+    {
+      "serial_number": "20250322_p139.jpg",
+      "area_name": "New Shobhagpura Bypass Rd",
+      "location_url": "https://maps.google.com/maps?q=24.6070422%2C73.72608&z=17&hl=en",
+      "latitude": 24.6070422,
+      "longitude": 73.72608,
+      "situation": "Bad",
+      "picture_url": ""
+    },
+    {
+      "serial_number": "20250322_p140.jpg",
+      "area_name": "New Shobhagpura Bypass Rd",
+      "location_url": "https://maps.google.com/maps?q=24.6072203%2C73.7260992&z=17&hl=en",
+      "latitude": 24.6072203,
+      "longitude": 73.7260992,
+      "situation": "Bad",
+      "picture_url": ""
+    },
+    {
+      "serial_number": "20250322_p141.jpg",
+      "area_name": "New Shobhagpura Bypass Rd",
+      "location_url": "https://maps.google.com/maps?q=24.6068361%2C73.725562&z=17&hl=en",
+      "latitude": 24.6068361,
+      "longitude": 73.725562,
+      "situation": "Bad",
+      "picture_url": ""
+    },
+    {
+      "serial_number": "20250322_p142.jpg",
+      "area_name": "New Shobhagpura Bypass Rd",
+      "location_url": "https://maps.google.com/maps?q=24.6068477%2C73.7254804&z=17&hl=en",
+      "latitude": 24.6068477,
+      "longitude": 73.7254804,
+      "situation": "Bad",
+      "picture_url": ""
+    }
     ]
 };
