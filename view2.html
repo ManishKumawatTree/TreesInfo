@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tree Image Gallery</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Custom CSS for the image gallery */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+            .gallery img {
+                width: 100%;
+                height: auto;
+                border-radius: 8px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                transition: transform 0.3s ease, opacity 0.3s ease;
+                cursor: pointer;
+            }
+
+                .gallery img:hover {
+                    transform: scale(1.05);
+                    opacity: 0.8;
+                }
+
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 1000;
+            overflow: hidden;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            position: relative;
+            background: white;
+            border-radius: 8px;
+            margin: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px;
+        }
+
+        .modal-header, .modal-footer {
+            width: 100%;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+            background: #ADD8E6; /* Light Blue */
+            color: #333;
+        }
+
+            .modal-header h5, .modal-footer p {
+                margin: 0;
+                font-weight: bold;
+            }
+
+        .modal-body img {
+            width: auto;
+            height: auto;
+            max-width: 100%;
+            max-height: 80vh;
+            cursor: zoom-in;
+        }
+
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 40px; /* Larger size for close button */
+            font-weight: bold;
+            color: #fff;
+            background-color: #FF6347; /* Tomato Red */
+            border-radius: 50%;
+            padding: 12px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+            .close:hover {
+                background-color: #FF4500; /* Darker red when hovered */
+            }
+
+        /* Title Styling */
+        h1 {
+            text-align: center;
+            font-size: 1.5rem; /* Smaller font size */
+            color: #333;
+            background-color: #ADD8E6; /* Light Blue background */
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        /* Ensure the container is centered */
+        .container {
+            text-align: center;
+        }
+
+        /* Modal header and footer styles */
+        .modal-header, .modal-footer {
+            background-color: #ADD8E6; /* Light Blue */
+            color: #333;
+            text-align: center; /* Ensure text is horizontally centered */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="my-4">Tree Image Gallery</h1>
+        <div class="gallery" id="treeGallery"></div>
+    </div>
+
+    <!-- Modal structure -->
+    <div class="modal" id="imageModal">
+        <div class="modal-content">
+            <div class="modal-header" id="modalHeader">
+                <h5>Tree Area</h5>
+            </div>
+            <div class="modal-body">
+                <img id="modalImage" src="" alt="">
+            </div>
+            <div class="modal-footer" id="modalFooter">
+                <p>Serial: 12345, Situation: Healthy</p>
+            </div>
+            <span class="close" id="closeModal">&times;</span>
+        </div>
+    </div>
+
+    <!-- Include the JSON data -->
+    <script src="treeData.js"></script>
+    <!-- Bootstrap JS & dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        // JavaScript to dynamically load tree images and handle modal
+        document.addEventListener("DOMContentLoaded", function () {
+            const gallery = document.getElementById("treeGallery");
+            const modal = document.getElementById("imageModal");
+            const modalImage = document.getElementById("modalImage");
+            const modalHeader = document.getElementById("modalHeader");
+            const modalFooter = document.getElementById("modalFooter");
+            const closeModal = document.getElementById("closeModal");
+
+            // Access the JSON data from treeData.js
+            treesData.Trees.forEach(tree => {
+                const pictureUrl = `images/${tree.serial_number}.jpg`;
+                const img = document.createElement("img");
+                img.src = pictureUrl;
+                img.alt = `Tree: ${tree.serial_number}`;
+                img.classList.add("loaded"); // Show image directly
+                img.dataset.area = tree.area_name;
+                img.dataset.serial = tree.serial_number;
+                img.dataset.situation = tree.situation;
+
+                gallery.appendChild(img);
+
+                // Event listener for image click
+                img.addEventListener("click", () => {
+                    modal.style.display = "flex";
+                    modalImage.src = img.src;
+                    modalHeader.querySelector("h5").innerText = img.dataset.area;
+                    modalFooter.querySelector("p").innerText = `Serial: ${img.dataset.serial}, Situation: ${img.dataset.situation}`;
+                });
+            });
+
+            // Close modal functionality
+            closeModal.addEventListener("click", () => {
+                modal.style.display = "none";
+            });
+
+            // Zoom functionality for modal image
+            modalImage.addEventListener("wheel", (event) => {
+                event.preventDefault();
+                let scale = parseFloat(modalImage.dataset.scale) || 1;
+                scale += event.deltaY * -0.01;
+                scale = Math.min(Math.max(0.5, scale), 5);
+                modalImage.dataset.scale = scale;
+                modalImage.style.transform = `scale(${scale})`;
+            });
+        });
+    </script>
+</body>
+</html>
