@@ -1423,6 +1423,33 @@ const treesData = {
       "longitude": 73.7254804,
       "situation": "Normal",
       "picture_url": ""
+    },
+    {
+      "serial_number": "20250323_p143.jpg",
+      "area_name": "Shobhagpura",
+      "location_url": "https://maps.google.com/maps?q=24.6014979%2C73.7125069&z=17&hl=en",
+      "latitude": 24.6014979,
+      "longitude": 73.7125069,
+      "situation": "Bad",
+      "picture_url": ""
+    },
+    {
+      "serial_number": "20250323_p144.jpg",
+      "area_name": "Shobhagpura",
+      "location_url": "https://maps.google.com/maps?q=24.6014982%2C73.7125057&z=17&hl=en",
+      "latitude": 24.6014982,
+      "longitude": 73.7125057,
+      "situation": "Bad",
+      "picture_url": ""
+    },
+    {
+      "serial_number": "20250323_p145.jpg",
+      "area_name": "Shobhagpura",
+      "location_url": "https://maps.google.com/maps?q=24.6011168%2C73.7124469&z=17&hl=en",
+      "latitude": 24.6011168,
+      "longitude": 73.7124469,
+      "situation": "Bad",
+      "picture_url": ""
     }
     ]
 };
