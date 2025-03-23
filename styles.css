@@ -145,15 +145,15 @@ body {
 }
 
     .contact-info h3 {
-        font-size: 1.5rem;
-        margin-bottom: 20px;
+        font-size: 1.1rem;
+        margin-bottom: 7px;
     }
 
 /* Container for the two contact tiles */
 .contact-persons {
     display: flex;
     justify-content: space-between; /* Aligns the tiles to the left and right */
-    gap: 20px;
+    gap: 5px;
     width: 100%;
     max-width: 1200px; /* Optional: sets a maximum width for large screens */
     margin: 0 auto; /* Centers the content horizontally */
@@ -163,27 +163,47 @@ body {
 /* Individual contact tile */
 .contact-person {
     background-color: #fff;
-    padding: 20px;
+    padding: 5px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
     text-align: left;
     flex: 1; /* Ensures the tiles stretch evenly */
-    min-width: 200px; /* Sets a smaller minimum width for the contact tiles */
+    min-width: 250px; /* Sets a smaller minimum width for the contact tiles */
     max-width: 500px; /* Prevents the contact tiles from growing too wide */
 }
 
-    /* Contact Person Name */
-    .contact-person h4 {
-        font-size: 1.2rem;
-        font-weight: bold;
-        margin-bottom: 10px;
+.contact-person-image {
+    width: 70px;
+    height: 70px;
+    margin-right: 5px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+    .contact-person-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 
-    /* Contact Person Details */
-    .contact-person p {
-        font-size: 1rem;
-        color: #333;
-    }
+.contact-person-details {
+    flex-grow: 1;
+}
+
+/* Contact Person Name */
+.contact-person h4 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Contact Person Details */
+.contact-person p {
+    font-size: 0.7rem;
+    color: #333;
+}
 
 @media (max-width: 768px) {
     /* For smaller screens, ensure the contact tiles stay horizontal */
