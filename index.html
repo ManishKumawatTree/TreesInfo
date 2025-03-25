@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tree Care</title>
-    <!-- Link to external CSS file -->
-    <link rel="stylesheet" href="styles.css">
+
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEJ1QKfZZ9cA8MyDJkFydHE6kQAc+aJ6XTK4b7WkJd8lbLmV99cfA0cQGfZY0" crossorigin="anonymous">
@@ -16,6 +15,152 @@
             font-family: Arial, sans-serif;
         }
 
+        /* Content of the page */
+        .content {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            margin-top: 60px; /* To account for the fixed header */
+            height: 100%; /* Ensures content takes full height */
+            text-align: center; /* Centers text */
+        }
+
+            .content h3 {
+                font-size: 1.5rem;
+                margin-bottom: 20px;
+            }
+
+            .content p {
+                font-size: 1.2rem;
+                width: 80%;
+                max-width: 600px;
+            }
+
+        /* Team image */
+        .team-image {
+            margin-top: 30px;
+        }
+
+        .portrait {
+            width: 250px;
+            height: auto;
+            border-radius: 50%;
+        }
+
+        /* Gallery Images */
+        .gallery {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        .gallery-image {
+            width: 200px;
+            height: auto;
+            margin: 5px;
+            border-radius: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Version Display */
+        .menu .version {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #aaa;
+        }
+
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Contact Section */
+        .contact-info {
+            padding: 20px 10px;
+            background-color: #f4f4f4;
+            text-align: center;
+            margin-top: 40px; /* Adds margin to separate contact section */
+            width: 100%;
+        }
+
+            .contact-info h3 {
+                font-size: 1.1rem;
+                margin-bottom: 7px;
+            }
+
+        /* Container for the two contact tiles */
+        .contact-persons {
+            display: flex;
+            justify-content: space-between; /* Aligns the tiles to the left and right */
+            gap: 5px;
+            width: 100%;
+            max-width: 1200px; /* Optional: sets a maximum width for large screens */
+            margin: 0 auto; /* Centers the content horizontally */
+            flex-wrap: wrap; /* Allows wrapping of contact tiles on very small screens */
+        }
+
+        /* Individual contact tile */
+        .contact-person {
+            background-color: #fff;
+            padding: 5px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            text-align: left;
+            flex: 1; /* Ensures the tiles stretch evenly */
+            min-width: 250px; /* Sets a smaller minimum width for the contact tiles */
+            max-width: 500px; /* Prevents the contact tiles from growing too wide */
+        }
+
+        .contact-person-image {
+            width: 70px;
+            height: 70px;
+            margin-right: 5px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+            .contact-person-image img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+        .contact-person-details {
+            flex-grow: 1;
+        }
+
+        /* Contact Person Name */
+        .contact-person h4 {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        /* Contact Person Details */
+        .contact-person p {
+            font-size: 0.7rem;
+            color: #333;
+        }
+
+        @media (max-width: 768px) {
+            /* For smaller screens, ensure the contact tiles stay horizontal */
+            .contact-persons {
+                justify-content: space-around; /* Ensures space between tiles even on smaller screens */
+            }
+
+            .contact-person {
+                min-width: 180px; /* Smaller minimum width */
+                max-width: 400px; /* Prevents tiles from stretching too much */
+            }
+        }
+
+
+
         /* Sidebar menu for mobile view */
         .sidebar {
             position: fixed;
@@ -25,7 +170,7 @@
             width: 250px;
             background-color: #343a40;
             transition: left 0.3s ease;
-            padding-top: 20px;
+            padding-top: 50px;
         }
 
         /* Close button at the top of the sidebar */
@@ -52,18 +197,34 @@
                 background-color: #575757;
             }
 
-        /* Menu Icon (Hamburger) */
+        /* Header styling */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 40px;
+            background-color: #343a40;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+            .header h1 {
+                color: white;
+                margin: 0;
+                font-size: 1.5rem;
+            }
+
+        /* Menu icon (hamburger) */
         .menu-icon {
+            position: absolute;
+            left: 10px;
+            top: 5px;
             cursor: pointer;
             font-size: 30px;
             color: white;
-            padding: 10px;
-        }
-
-        /* Main content area */
-        .content {
-            margin-left: 0;
-            padding: 20px;
         }
 
         /* Adjust content when sidebar is open */
@@ -74,6 +235,7 @@
         /* Version info styling */
         .version {
             margin-top: 20px;
+            margin-left:10px;
             font-size: 14px;
             color: white;
             font-weight: bold;
@@ -90,7 +252,7 @@
         <!-- Sidebar Menu Links -->
         <a href="index.html"><i class="fas fa-home"></i> Home</a>
         <a href="view.html"><i class="fas fa-eye"></i> View</a>
-        <a href="view2.html"><i class="fas fa-eye"></i> View2</a>
+        <a href="view2.html"><i class="fas fa-eye"></i> Gallery</a>
         <a href="map.html"><i class="fas fa-map-marker-alt"></i> Map</a>
         <a href="feedback.html"><i class="fas fa-comment-dots"></i> Feedback</a>
         <a href="request.html"><i class="fas fa-paper-plane"></i> Request Form</a>
@@ -98,14 +260,14 @@
         <div class="version" id="versionInfo">Version 1.0.0</div> <!-- Version Display -->
     </div>
 
-    <!-- Menu Icon (Hamburger) -->
-    <div class="menu-icon" id="menuIcon">
-        <i class="fas fa-bars"></i>
+    <div class="header">
+        <span class="menu-icon" id="menuIcon"><i class="fas fa-bars"></i></span>
+        <h1>We Care for Trees</h1>
     </div>
 
     <!-- Page Content -->
     <div class="content">
-        <h3>We Care for Trees</h3>
+        <!--<h3>We Care for Trees</h3>-->
         <p>
             We are committed to caring for the trees growing along the roadside. Over time, we have observed that the tree guards surrounding these trees are causing harm to their growth. These guards, initially intended to protect the trees, end up restricting their natural expansion.
         </p>
@@ -185,7 +347,7 @@
 
         // Display the version number in the menu
         versionInfo.innerText = `Version: ${NEW_VERSION}`;
-        
+
         const menuIcon = document.getElementById('menuIcon');
         const sidebar = document.getElementById('sidebar');
         const closeBtn = document.getElementById('closeBtn');
