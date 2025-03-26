@@ -132,7 +132,7 @@
                 <h5>Tree Area</h5>
             </div>
             <div class="modal-body">
-                <img id="modalImage" src="" alt="">
+                <img id="modalImage" loading="lazy" src="" alt="">
             </div>
             <div class="modal-footer" id="modalFooter">
                 <p>Serial: 12345, Situation: Healthy</p>
@@ -162,6 +162,7 @@
             treesData.Trees.forEach(tree => {
                 const pictureUrl = `images/${tree.serial_number}.jpg`;
                 const img = document.createElement("img");
+                img.loading = "lazy";
                 img.src = pictureUrl;
                 img.alt = `Tree: ${tree.serial_number}`;
                 img.classList.add("loaded"); // Show image directly
