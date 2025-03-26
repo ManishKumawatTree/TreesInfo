@@ -277,6 +277,7 @@
 
                 const image = document.createElement('img');
                 image.classList.add('gallery-image');
+                image.loading="lazy";
                 image.src = tree.picture_url || 'https://via.placeholder.com/400'; // Placeholder image if no picture_url
 
                 galleryItem.appendChild(image);
