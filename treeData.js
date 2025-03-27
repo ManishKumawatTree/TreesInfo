@@ -1254,7 +1254,7 @@ const treesData = {
       "picture_url": ""
     },
     {
-      "serial_number": "20250322_p124.jpg",
+      "serial_number": "20250322_p124",
       "area_name": "New Shobhagpura Bypass Rd",
       "location_url": "https://maps.google.com/maps?q=24.6073828%2C73.7264931&z=17&hl=en",
       "latitude": 24.6073828,
@@ -1263,7 +1263,7 @@ const treesData = {
       "picture_url": ""
     },
     {
-      "serial_number": "20250322_p125.jpg",
+      "serial_number": "20250322_p125",
       "area_name": "New Shobhagpura Bypass Rd",
       "location_url": "https://maps.google.com/maps?q=24.6072899%2C73.7265056&z=17&hl=en",
       "latitude": 24.6072899,
@@ -1281,7 +1281,7 @@ const treesData = {
       "picture_url": ""
     },
     {
-      "serial_number": "20250322_p127.jpg",
+      "serial_number": "20250322_p127",
       "area_name": "New Shobhagpura Bypass Rd",
       "location_url": "https://maps.google.com/maps?q=24.6073586%2C73.7266114&z=17&hl=en",
       "latitude": 24.6073586,
@@ -1290,7 +1290,7 @@ const treesData = {
       "picture_url": ""
     },
     {
-      "serial_number": "20250322_p128.jpg",
+      "serial_number": "20250322_p128",
       "area_name": "New Shobhagpura Bypass Rd",
       "location_url": "https://maps.google.com/maps?q=24.607456%2C73.7265897&z=17&hl=en",
       "latitude": 24.607456,
@@ -1299,7 +1299,7 @@ const treesData = {
       "picture_url": ""
     },
     {
-      "serial_number": "20250322_p129.jpg",
+      "serial_number": "20250322_p129",
       "area_name": "New Shobhagpura Bypass Rd",
       "location_url": "https://maps.google.com/maps?q=24.6074869%2C73.7267266&z=17&hl=en",
       "latitude": 24.6074869,
@@ -1317,7 +1317,7 @@ const treesData = {
       "picture_url": ""
     },
     {
-      "serial_number": "20250322_p131.jpg",
+      "serial_number": "20250322_p131",
       "area_name": "New Shobhagpura Bypass Rd",
       "location_url": "https://maps.google.com/maps?q=24.6076743%2C73.7269446&z=17&hl=en",
       "latitude": 24.6076743,
@@ -1335,7 +1335,7 @@ const treesData = {
       "picture_url": ""
     },
     {
-      "serial_number": "20250322_p133.jpg",
+      "serial_number": "20250322_p133",
       "area_name": "New Shobhagpura Bypass Rd",
       "location_url": "https://maps.google.com/maps?q=24.6075801%2C73.7271143&z=17&hl=en",
       "latitude": 24.6075801,
@@ -1344,7 +1344,7 @@ const treesData = {
       "picture_url": ""
     },
     {
-      "serial_number": "20250322_p134.jpg",
+      "serial_number": "20250322_p134",
       "area_name": "New Shobhagpura Bypass Rd",
       "location_url": "https://maps.google.com/maps?q=24.6072671%2C73.726619&z=17&hl=en",
       "latitude": 24.6072671,
@@ -1353,7 +1353,7 @@ const treesData = {
       "picture_url": ""
     },
     {
-      "serial_number": "20250322_p135.jpg",
+      "serial_number": "20250322_p135",
       "area_name": "New Shobhagpura Bypass Rd",
       "location_url": "https://maps.google.com/maps?q=24.6072435%2C73.7265558&z=17&hl=en",
       "latitude": 24.6072435,
@@ -1362,7 +1362,7 @@ const treesData = {
       "picture_url": ""
     },
     {
-      "serial_number": "20250322_p136.jpg",
+      "serial_number": "20250322_p136",
       "area_name": "New Shobhagpura Bypass Rd",
       "location_url": "https://maps.google.com/maps?q=24.6071795%2C73.7264894&z=17&hl=en",
       "latitude": 24.6071795,
@@ -1371,7 +1371,7 @@ const treesData = {
       "picture_url": ""
     },
     {
-      "serial_number": "20250322_p137.jpg",
+      "serial_number": "20250322_p137",
       "area_name": "New Shobhagpura Bypass Rd",
       "location_url": "https://maps.google.com/maps?q=24.607153%2C73.7264119&z=17&hl=en",
       "latitude": 24.607153,
@@ -1380,7 +1380,7 @@ const treesData = {
       "picture_url": ""
     },
     {
-      "serial_number": "20250322_p138.jpg",
+      "serial_number": "20250322_p138",
       "area_name": "New Shobhagpura Bypass Rd",
       "location_url": "https://maps.google.com/maps?q=24.6070796%2C73.7261508&z=17&hl=en",
       "latitude": 24.6070796,
@@ -1389,7 +1389,7 @@ const treesData = {
       "picture_url": ""
     },
     {
-      "serial_number": "20250322_p139.jpg",
+      "serial_number": "20250322_p139",
       "area_name": "New Shobhagpura Bypass Rd",
       "location_url": "https://maps.google.com/maps?q=24.6070422%2C73.72608&z=17&hl=en",
       "latitude": 24.6070422,
@@ -1398,7 +1398,7 @@ const treesData = {
       "picture_url": ""
     },
     {
-      "serial_number": "20250322_p140.jpg",
+      "serial_number": "20250322_p140",
       "area_name": "New Shobhagpura Bypass Rd",
       "location_url": "https://maps.google.com/maps?q=24.6072203%2C73.7260992&z=17&hl=en",
       "latitude": 24.6072203,
@@ -1407,7 +1407,7 @@ const treesData = {
       "picture_url": ""
     },
     {
-      "serial_number": "20250322_p141.jpg",
+      "serial_number": "20250322_p141",
       "area_name": "New Shobhagpura Bypass Rd",
       "location_url": "https://maps.google.com/maps?q=24.6068361%2C73.725562&z=17&hl=en",
       "latitude": 24.6068361,
@@ -1416,7 +1416,7 @@ const treesData = {
       "picture_url": ""
     },
     {
-      "serial_number": "20250322_p142.jpg",
+      "serial_number": "20250322_p142",
       "area_name": "New Shobhagpura Bypass Rd",
       "location_url": "https://maps.google.com/maps?q=24.6068477%2C73.7254804&z=17&hl=en",
       "latitude": 24.6068477,
@@ -1425,7 +1425,7 @@ const treesData = {
       "picture_url": ""
     },
     {
-      "serial_number": "20250323_p143.jpg",
+      "serial_number": "20250323_p143",
       "area_name": "Shobhagpura",
       "location_url": "https://maps.google.com/maps?q=24.6014979%2C73.7125069&z=17&hl=en",
       "latitude": 24.6014979,
@@ -1434,7 +1434,7 @@ const treesData = {
       "picture_url": ""
     },
     {
-      "serial_number": "20250323_p144.jpg",
+      "serial_number": "20250323_p144",
       "area_name": "Shobhagpura",
       "location_url": "https://maps.google.com/maps?q=24.6014982%2C73.7125057&z=17&hl=en",
       "latitude": 24.6014982,
@@ -1443,7 +1443,7 @@ const treesData = {
       "picture_url": ""
     },
     {
-      "serial_number": "20250323_p145.jpg",
+      "serial_number": "20250323_p145",
       "area_name": "Shobhagpura",
       "location_url": "https://maps.google.com/maps?q=24.6011168%2C73.7124469&z=17&hl=en",
       "latitude": 24.6011168,
@@ -1452,7 +1452,7 @@ const treesData = {
       "picture_url": ""
     },
      {
-      "serial_number": "20250326_p146.jpg",
+      "serial_number": "20250326_p146",
       "area_name": "Shobhagpura",
       "location_url": "https://maps.google.com/maps?q=24.6065198%2C73.7153731&z=17&hl=en",
       "latitude": 24.6065198,
@@ -1461,7 +1461,7 @@ const treesData = {
       "picture_url": ""
     },
     {
-      "serial_number": "20250326_p147.jpg",
+      "serial_number": "20250326_p147",
       "area_name": "Shobhagpura",
       "location_url": "https://maps.google.com/maps?q=24.6045227%2C73.7166514&z=17&hl=en",
       "latitude": 24.6045227,
