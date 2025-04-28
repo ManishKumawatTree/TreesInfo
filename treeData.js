@@ -1657,6 +1657,69 @@ const treesData = {
       "longitude": 73.7177687,
       "situation": "Bad",
       "picture_url": ""
+    },
+    {
+      "serial_number": "20250420_p169",
+      "area_name": "New RTO 100ft Rd",
+      "location_url": "https://maps.google.com/maps?q=24.6081679%2C73.7281385&z=17&hl=en",
+      "latitude": 24.6081679,
+      "longitude": 73.7281385,
+      "situation": "Bad",
+      "picture_url": ""
+    },
+    {
+      "serial_number": "20250420_p170",
+      "area_name": "New RTO 100ft Rd",
+      "location_url": "https://maps.google.com/maps?q=24.6082318%2C73.7284031&z=17&hl=en",
+      "latitude": 24.6082318,
+      "longitude": 73.7284031,
+      "situation": "Bad",
+      "picture_url": ""
+    },
+    {
+      "serial_number": "20250420_p171",
+      "area_name": "New RTO 100ft Rd",
+      "location_url": "https://maps.google.com/maps?q=24.6085249%2C73.7285306&z=17&hl=en",
+      "latitude": 24.6085249,
+      "longitude": 73.7285306,
+      "situation": "Bad",
+      "picture_url": ""
+    },
+    {
+      "serial_number": "20250420_p172",
+      "area_name": "New RTO 100ft Rd",
+      "location_url": "https://maps.google.com/maps?q=24.6085232%2C73.7286142&z=17&hl=en",
+      "latitude": 24.6085232,
+      "longitude": 73.7286142,
+      "situation": "Bad",
+      "picture_url": ""
+    },
+    {
+      "serial_number": "20250420_p173",
+      "area_name": "New RTO 100ft Rd",
+      "location_url": "https://maps.google.com/maps?q=24.608568%2C73.7287397&z=17&hl=en",
+      "latitude": 24.608568,
+      "longitude": 73.7287397,
+      "situation": "Bad",
+      "picture_url": ""
+    },
+    {
+      "serial_number": "20250427_p174",
+      "area_name": "Hiran Magri",
+      "location_url": "https://maps.google.com/maps?q=24.5462308%2C73.699405&z=17&hl=en",
+      "latitude": 24.5462308,
+      "longitude": 73.699405,
+      "situation": "Bad",
+      "picture_url": ""
+    },
+    {
+      "serial_number": "20250427_p175",
+      "area_name": "Hiran Magri",
+      "location_url": "https://maps.google.com/maps?q=24.5620013%2C73.7107205&z=17&hl=en",
+      "latitude": 24.5620013,
+      "longitude": 73.7107205,
+      "situation": "Bad",
+      "picture_url": ""
     }
     ]
 };
