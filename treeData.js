@@ -1999,6 +1999,15 @@ const treesData = {
       "longitude": 73.7335409,
       "situation": "Bad",
       "picture_url": ""
+    },
+    {
+      "serial_number": "20250511_p207",
+      "area_name": "Chitrakoot Nagar",
+      "location_url": "https://maps.google.com/maps?q=24.6260723%2C73.7252702&z=17&hl=en",
+      "latitude": 24.6260723,
+      "longitude": 73.7252702,
+      "situation": "Bad",
+      "picture_url": ""
     }
     ]
 };
