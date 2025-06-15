@@ -2008,6 +2008,42 @@ const treesData = {
       "longitude": 73.7252702,
       "situation": "Bad",
       "picture_url": ""
+    },
+    {
+      "serial_number": "20250611_p208",
+      "area_name": "Chitrakoot Nagar",
+      "location_url": "https://maps.google.com/maps?q=24.6222805%2C73.7258981&z=17&hl=en",
+      "latitude": 24.6222805,
+      "longitude": 73.7258981,
+      "situation": "Bad",
+      "picture_url": ""
+    },
+    {
+      "serial_number": "20250611_p209",
+      "area_name": "Chitrakoot Nagar",
+      "location_url": "https://maps.google.com/maps?q=24.6221781%2C73.7254204&z=17&hl=en",
+      "latitude": 24.6221781,
+      "longitude": 73.7254204,
+      "situation": "Bad",
+      "picture_url": ""
+    },
+    {
+      "serial_number": "20250611_p210",
+      "area_name": "Chitrakoot Nagar",
+      "location_url": "https://maps.google.com/maps?q=24.6279054%2C73.7229876&z=17&hl=en",
+      "latitude": 24.6279054,
+      "longitude": 73.7229876,
+      "situation": "Bad",
+      "picture_url": ""
+    },
+    {
+      "serial_number": "20250611_p211",
+      "area_name": "Chitrakoot Nagar",
+      "location_url": "https://maps.google.com/maps?q=24.6017629%2C73.7137224&z=17&hl=en",
+      "latitude": 24.6017629,
+      "longitude": 73.7137224,
+      "situation": "Bad",
+      "picture_url": ""
     }
     ]
 };
