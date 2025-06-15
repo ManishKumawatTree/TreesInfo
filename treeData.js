@@ -2038,7 +2038,7 @@ const treesData = {
     },
     {
       "serial_number": "20250611_p211",
-      "area_name": "Chitrakoot Nagar",
+      "area_name": "Shobhagpura",
       "location_url": "https://maps.google.com/maps?q=24.6017629%2C73.7137224&z=17&hl=en",
       "latitude": 24.6017629,
       "longitude": 73.7137224,
