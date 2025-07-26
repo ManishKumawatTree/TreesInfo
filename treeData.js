@@ -2044,6 +2044,15 @@ const treesData = {
       "longitude": 73.7137224,
       "situation": "Bad",
       "picture_url": ""
+    },
+    {
+      "serial_number": "20250717_p212",
+      "area_name": "New Keshav Nagar",
+      "location_url": "https://maps.google.com/maps?q=24.5997728%2C73.7176641&z=17&hl=en",
+      "latitude": 24.5997728,
+      "longitude": 73.7176641,
+      "situation": "Bad",
+      "picture_url": ""
     }
     ]
 };
