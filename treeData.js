@@ -2053,6 +2053,78 @@ const treesData = {
       "longitude": 73.7176641,
       "situation": "Bad",
       "picture_url": ""
+    },
+	    {
+      "serial_number": "20250727_p213",
+      "area_name": "Ragunathpura",
+      "location_url": "https://maps.google.com/maps?q=24.6116833%2C73.7304678&z=17&hl=en",
+      "latitude": 24.6116833,
+      "longitude": 73.7304678,
+      "situation": "Bad",
+      "picture_url": ""
+    },
+    {
+      "serial_number": "20250727_p214",
+      "area_name": "Ragunathpura",
+      "location_url": "https://maps.google.com/maps?q=24.6116861%2C73.7304654&z=17&hl=en",
+      "latitude": 24.6116861,
+      "longitude": 73.7304654,
+      "situation": "Bad",
+      "picture_url": ""
+    },
+    {
+      "serial_number": "20250727_p215",
+      "area_name": "Ragunathpura",
+      "location_url": "https://maps.google.com/maps?q=24.6116675%2C73.7303597&z=17&hl=en",
+      "latitude": 24.6116675,
+      "longitude": 73.7303597,
+      "situation": "Bad",
+      "picture_url": ""
+    },
+    {
+      "serial_number": "20250727_p216",
+      "area_name": "Ragunathpura",
+      "location_url": "https://maps.google.com/maps?q=24.6116686%2C73.7303747&z=17&hl=en",
+      "latitude": 24.6116686,
+      "longitude": 73.7303747,
+      "situation": "Bad",
+      "picture_url": ""
+    },
+    {
+      "serial_number": "20250727_p217",
+      "area_name": "Ragunathpura",
+      "location_url": "https://maps.google.com/maps?q=24.6118038%2C73.7305393&z=17&hl=en",
+      "latitude": 24.6118038,
+      "longitude": 73.7305393,
+      "situation": "Bad",
+      "picture_url": ""
+    },
+    {
+      "serial_number": "20250727_p218",
+      "area_name": "Ragunathpura",
+      "location_url": "https://maps.google.com/maps?q=24.6119433%2C73.7303595&z=17&hl=en",
+      "latitude": 24.6119433,
+      "longitude": 73.7303595,
+      "situation": "Bad",
+      "picture_url": ""
+    },
+    {
+      "serial_number": "20250727_p219",
+      "area_name": "Ragunathpura",
+      "location_url": "https://maps.google.com/maps?q=24.6119449%2C73.7304356&z=17&hl=en",
+      "latitude": 24.6119449,
+      "longitude": 73.7304356,
+      "situation": "Bad",
+      "picture_url": ""
+    },
+    {
+      "serial_number": "20250727_p220",
+      "area_name": "Ragunathpura",
+      "location_url": "https://maps.google.com/maps?q=24.6119531%2C73.730388&z=17&hl=en",
+      "latitude": 24.6119531,
+      "longitude": 73.730388,
+      "situation": "Bad",
+      "picture_url": ""
     }
     ]
 };
