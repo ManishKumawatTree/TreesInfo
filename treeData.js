@@ -2305,9 +2305,46 @@ const treesData = {
       "longitude": 73.71646,
       "situation": "Bad",
       "picture_url": ""
+    },
+	{
+      "serial_number": "20250905_p241",
+      "area_name": "Shobhagpura",
+      "location_url": "https://maps.google.com/maps?q=24.6013851%2C73.7134653&z=17&hl=en",
+      "latitude": 24.6013851,
+      "longitude": 73.7134653,
+      "situation": "Bad",
+      "picture_url": ""
+    },
+    {
+      "serial_number": "20250905_p242",
+      "area_name": "Shobhagpura",
+      "location_url": "https://maps.google.com/maps?q=24.6016163%2C73.7139673&z=17&hl=en",
+      "latitude": 24.6016163,
+      "longitude": 73.7139673,
+      "situation": "Bad",
+      "picture_url": ""
+    },
+    {
+      "serial_number": "20250905_p243",
+      "area_name": "Ragunathpura",
+      "location_url": "https://maps.google.com/maps?q=24.6124917%2C73.732835&z=17&hl=en",
+      "latitude": 24.6124917,
+      "longitude": 73.732835,
+      "situation": "Bad",
+      "picture_url": ""
+    },
+    {
+      "serial_number": "20250905_p244",
+      "area_name": "Ragunathpura",
+      "location_url": "https://maps.google.com/maps?q=24.612253391881996%2C73.7329748095487&z=17&hl=en",
+      "latitude": 24.612253391881996,
+      "longitude": 73.7329748095487,
+      "situation": "Bad",
+      "picture_url": ""
     }
     ]
 };
+
 
 
 
