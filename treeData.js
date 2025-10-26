@@ -2485,9 +2485,82 @@ const treesData = {
       "longitude": 73.720765,
       "situation": "Bad",
       "picture_url": ""
+    },
+	{
+      "serial_number": "20251025_p261",
+      "area_name": "New Keshav Nagar",
+      "location_url": "https://maps.google.com/maps?q=24.59811%2C73.7199017&z=17&hl=en",
+      "latitude": 24.59811,
+      "longitude": 73.7199017,
+      "situation": "Bad",
+      "picture_url": ""
+    },
+    {
+      "serial_number": "20251025_p262",
+      "area_name": "New Keshav Nagar",
+      "location_url": "https://maps.google.com/maps?q=24.5981583%2C73.7198433&z=17&hl=en",
+      "latitude": 24.5981583,
+      "longitude": 73.7198433,
+      "situation": "Bad",
+      "picture_url": ""
+    },
+    {
+      "serial_number": "20251025_p263",
+      "area_name": "New Keshav Nagar",
+      "location_url": "https://maps.google.com/maps?q=24.597965%2C73.7194183&z=17&hl=en",
+      "latitude": 24.597965,
+      "longitude": 73.7194183,
+      "situation": "Bad",
+      "picture_url": ""
+    },
+    {
+      "serial_number": "20251025_p264",
+      "area_name": "New Keshav Nagar",
+      "location_url": "https://maps.google.com/maps?q=24.59774%2C73.7195017&z=17&hl=en",
+      "latitude": 24.59774,
+      "longitude": 73.7195017,
+      "situation": "Bad",
+      "picture_url": ""
+    },
+    {
+      "serial_number": "20251025_p265",
+      "area_name": "New Keshav Nagar",
+      "location_url": "https://maps.google.com/maps?q=24.5976117%2C73.720925&z=17&hl=en",
+      "latitude": 24.5976117,
+      "longitude": 73.720925,
+      "situation": "Bad",
+      "picture_url": ""
+    },
+    {
+      "serial_number": "20251025_p266",
+      "area_name": "New Keshav Nagar",
+      "location_url": "https://maps.google.com/maps?q=24.5976367%2C73.7209567&z=17&hl=en",
+      "latitude": 24.5976367,
+      "longitude": 73.7209567,
+      "situation": "Bad",
+      "picture_url": ""
+    },
+    {
+      "serial_number": "20251025_p267",
+      "area_name": "New Keshav Nagar",
+      "location_url": "https://maps.google.com/maps?q=24.598075%2C73.72037&z=17&hl=en",
+      "latitude": 24.598075,
+      "longitude": 73.72037,
+      "situation": "Bad",
+      "picture_url": ""
+    },
+    {
+      "serial_number": "20251025_p268",
+      "area_name": "New Keshav Nagar",
+      "location_url": "https://maps.google.com/maps?q=24.6080717%2C73.7331533&z=17&hl=en",
+      "latitude": 24.6080717,
+      "longitude": 73.7331533,
+      "situation": "Bad",
+      "picture_url": ""
     }
     ]
 };
+
 
 
 
